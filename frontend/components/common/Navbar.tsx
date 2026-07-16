@@ -15,8 +15,8 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-white sticky top-0 z-50 border-b border-gray-100 shadow-sm">
-      <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+    <nav className="bg-[#F5F3FF] sticky top-0 z-50">
+      <div className="h-[88px] px-[165px] flex items-center justify-between gap-[10px]">
 
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
@@ -29,7 +29,7 @@ export default function Navbar() {
               />
             </svg>
           </div>
-          <span className="text-[15px] font-bold tracking-tight">
+          <span className="text-[21px] font-extrabold tracking-tight">
             <span className="text-indigo-600">PTE.</span>
             <span className="text-gray-800">Prep</span>
           </span>
@@ -42,10 +42,10 @@ export default function Navbar() {
               key={link.name}
               href={link.href}
               onClick={() => setActiveLink(link.name)}
-              className={`text-sm font-medium pb-0.5 transition-all duration-150 ${
+              className={`text-[17px] font-bold pb-0.5 transition-all duration-150 ${
                 activeLink === link.name
                   ? 'text-indigo-600 border-b-2 border-indigo-600'
-                  : 'text-gray-600 hover:text-indigo-600 border-b-2 border-transparent'
+                  : 'text-indigo-600 hover:text-indigo-700 border-b-2 border-transparent'
               }`}
             >
               {link.name}
@@ -80,7 +80,7 @@ export default function Navbar() {
           {/* Log in Button */}
           <Link
             href="/login"
-            className="px-5 py-[7px] text-sm font-semibold text-indigo-600 border-2 border-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors"
+            className="px-5 py-[7px] text-[14px] font-bold text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 transition-colors"
           >
             Log in
           </Link>
@@ -88,7 +88,7 @@ export default function Navbar() {
           {/* Sign Up Button */}
           <Link
             href="/register"
-            className="px-5 py-[7px] text-sm font-semibold text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 transition-colors shadow-sm"
+            className="px-5 py-[7px] text-[14px] font-bold text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 transition-colors shadow-sm"
           >
             Sign Up
           </Link>

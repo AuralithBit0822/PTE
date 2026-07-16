@@ -9,17 +9,17 @@ function HeroSection() {
   return (
     <section className="bg-[#F5F3FF] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center min-h-[440px]">
+        <div className="flex items-center min-h-[520px]">
 
           {/* ── Left Content ── */}
           <div className="w-[44%] py-14 pr-6 flex-shrink-0">
-            <h1 className="text-[2.4rem] font-extrabold text-gray-900 leading-[1.18] mb-5">
+            <h1 className="text-[2rem] font-extrabold text-gray-900 leading-[1.18] mb-5">
               Achieve Your Dream{' '}
               <span className="text-indigo-600">PTE Score</span>
               <br />
               <span className="text-indigo-600">Unlock</span> Global Opportunities
             </h1>
-            <p className="text-gray-500 text-[15px] leading-relaxed mb-8 max-w-[420px]">
+            <p className="text-gray-500 text-[15px] leading-relaxed mb-8 max-w-[420px] font-medium">
               Master every section with AI-powered feedback, realistic mock tests, and personalized
               preparation.
             </p>
@@ -49,21 +49,21 @@ function HeroSection() {
                 <Image src="/images/Vector.png" alt="Students icon" width={28} height={28} />
                 <div>
                   <p className="text-sm font-bold text-gray-900">50,000+</p>
-                  <p className="text-[11px] text-gray-500">Happy Students</p>
+                  <p className="text-[11px] text-gray-500 font-medium">Happy Students</p>
                 </div>
               </div>
               <div className="flex items-center gap-2.5">
                 <Image src="/images/Vector (1).png" alt="Rating icon" width={28} height={28} />
                 <div>
                   <p className="text-sm font-bold text-gray-900">4.8/5</p>
-                  <p className="text-[11px] text-gray-500">Average Rating</p>
+                  <p className="text-[11px] text-gray-500 font-medium">Average Rating</p>
                 </div>
               </div>
               <div className="flex items-center gap-2.5">
                 <Image src="/images/Vector (2).png" alt="Mock test icon" width={28} height={28} />
                 <div>
                   <p className="text-sm font-bold text-gray-900">100,000+</p>
-                  <p className="text-[11px] text-gray-500">Mock Test Taken</p>
+                  <p className="text-[11px] text-gray-500 font-medium">Mock Test Taken</p>
                 </div>
               </div>
             </div>
