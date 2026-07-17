@@ -52,3 +52,81 @@
   background-image: radial-gradient(circle, #c7d2fe 1px, transparent 1px);
   background-size: 20px 20px;
 }
+
+/* ── Practice Page (Plain CSS) ── */
+.practice-page { min-height: 100vh; background: #fff; }
+.practice-hero { background: rgba(246, 244, 253, 1); min-height: 675px; padding: 37px clamp(24px, 4vw, 80px) 38px clamp(24px, 4vw, 80px); }
+.practice-hero .hero-grid { width: 100%; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; align-items: center; }
+.hero-copy { align-self: stretch; position: relative; padding-top: 2px; }
+.breadcrumbs { display: flex; align-items: center; gap: 13px; font-size: 20px; font-weight: 700; }
+.chevron { font-size: 37px; line-height: 15px; font-weight: 400; color: #3b3b3b; }
+.practice-hero h1 { margin: 91px 0 80px; font-size: clamp(36px, 2.4vw, 45px); letter-spacing: .2px; line-height: 1.72; font-weight: 800; }
+.practice-hero h1 em { color: #2e10f2; font-style: normal; }
+.hero-copy p { margin: 0; color: #383838; font-size: 24px; line-height: 1.92; font-weight: 500; }
+.hero-image-wrap { width: 100%; overflow: hidden; border-radius: 28px; }
+.hero-image-wrap img { display: block; width: 80%; height: auto; margin-left: auto; }
+.stats-card { width: calc(145% + 10px); min-height: 95px; background: #fff; border: 1px solid #e6e6ee; border-radius: 12px; box-shadow: 0 8px 24px rgba(33,25,138,0.06); display: flex; align-items: center; padding: 14px 16px; margin-top: 80px; gap: 8px; }
+.stat { min-width: 0; flex: 1; display: flex; align-items: center; gap: 10px; padding: 0 12px; }
+.stat + .stat { border-left: 1px solid #909090; }
+.stat-icon { width: 42px; height: 42px; background: #e4e0ff; border-radius: 50%; display: grid; place-items: center; flex: 0 0 auto; }
+.stat-icon svg { width: 24px; height: 24px; fill: none; stroke: #2e10f2; stroke-width: 2.1; stroke-linecap: round; stroke-linejoin: round; }
+.stat strong, .stat small { display: block; }
+.stat strong { font-size: 18px; line-height: 20px; }
+.stat small { color: #414141; font-size: 13px; line-height: 16px; }
+
+.content-section { max-width: 1320px; margin: 0 auto; padding: 2.5rem 6rem; }
+.outline-link, .text-link { color: #2e10f2; font-weight: 700; background: transparent; border: none; cursor: pointer; }
+.question-grid { display: grid; grid-template-columns: repeat(3, minmax(240px, 1fr)); gap: 1.5rem; }
+.question-card { background: #fff; border: 1px solid #ebecff; border-radius: 24px; padding: 2rem; display: flex; flex-direction: column; gap: 1rem; min-height: 310px; }
+.card-icon { width: 52px; height: 52px; border-radius: 18px; display: grid; place-items: center; background: rgba(110, 80, 255, 0.1); font-size: 1.4rem; }
+.question-card h3 { margin: 0; font-size: 1.2rem; }
+.question-card p { margin: 0; color: #575771; line-height: 1.75; }
+.practice-button { margin-top: auto; display: inline-flex; align-items: center; justify-content: center; padding: 0.95rem 1.3rem; border-radius: 999px; background: #2e10f2; color: #fff; font-weight: 700; text-decoration: none; }
+.mode-section { background: #faf8ff; }
+.mode-grid { display: grid; grid-template-columns: repeat(3, minmax(260px, 1fr)); gap: 1.5rem; }
+.mode-card { display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: start; background: #fff; border: 1px solid #ebecff; border-radius: 24px; padding: 1.8rem; }
+.mode-icon { width: 54px; height: 54px; display: grid; place-items: center; border-radius: 18px; background: rgba(110, 80, 255, 0.12); font-size: 1.4rem; }
+.mode-card h3 { margin: 0 0 0.4rem; font-size: 1.15rem; }
+.mode-card p { margin: 0; color: #5d5d7a; line-height: 1.75; }
+.dashboard-grid { display: grid; grid-template-columns: 1.45fr 1fr; gap: 1.5rem; }
+.dashboard-card { background: #fff; border: 1px solid #ebecff; border-radius: 28px; padding: 1.8rem; box-shadow: 0 24px 40px rgba(33, 25, 138, 0.06); }
+.card-heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1.5rem; }
+.card-heading h2 { margin: 0; font-size: 1.35rem; }
+.view-all { color: #5d4cff; border: 1px solid rgba(93, 76, 255, 0.18); border-radius: 999px; background: transparent; padding: 0.85rem 1rem; font-weight: 700; cursor: pointer; }
+.recent-row { display: grid; grid-template-columns: auto 1fr auto; gap: 1rem; align-items: center; padding: 1rem 0; border-top: 1px solid #f3f3ff; }
+.recent-row:first-child { border-top: 0; }
+.recent-icon { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 14px; background: rgba(110, 80, 255, 0.1); font-size: 1rem; }
+.recent-row h3 { margin: 0; font-size: 1rem; }
+.recent-row p { margin: 0.35rem 0 0; color: #6c6c8d; font-size: 0.95rem; }
+.performance-main { display: grid; grid-template-columns: minmax(170px, 200px) 1fr; gap: 1.5rem; align-items: center; }
+.donut { width: min(200px, 100%); aspect-ratio: 1; border-radius: 50%; background: linear-gradient(180deg, #f6f3ff 0%, #fff 100%); display: grid; place-items: center; }
+.donut b { display: block; font-size: 2.1rem; margin-bottom: 0.3rem; }
+.donut small { color: #6f6f92; }
+.metrics { display: grid; gap: 1rem; }
+.metric { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1rem 1.2rem; background: #faf8ff; border-radius: 18px; }
+.metric span { color: #4c4c6a; }
+.metric b { font-size: 1rem; }
+.great-job { display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: center; margin-top: 1.5rem; padding: 1.2rem 1.25rem; background: rgba(110, 80, 255, 0.08); border-radius: 20px; }
+.great-job span { width: 50px; height: 50px; display: grid; place-items: center; border-radius: 16px; background: rgba(110, 80, 255, 0.12); font-size: 1.4rem; }
+.great-job strong { display: block; margin-bottom: 0.35rem; }
+
+.daily-banner { max-width: 1320px; margin: 2rem auto 4rem; padding: 1.8rem 2rem; background: rgba(110, 80, 255, 0.08); border-radius: 24px; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
+.daily-icon { display: grid; width: 60px; height: 60px; place-items: center; border-radius: 18px; background: rgba(46, 16, 242, 0.14); color: #2e10f2; font-size: 1.3rem; }
+.daily-banner h3 { margin: 0 0 0.35rem; }
+.daily-banner p { margin: 0; color: #4f4f6c; line-height: 1.65; }
+
+@media (max-width: 1200px) {
+  .practice-hero { padding-top: 70px; }
+  .practice-hero .hero-grid { grid-template-columns: 1fr 1fr; }
+  .practice-hero h1 { margin-top: 62px; line-height: 1.5; }
+}
+@media (max-width: 800px) {
+  .practice-hero { padding: 42px 0; min-height: 0; }
+  .practice-hero .hero-grid { width: min(100% - 32px, 600px); display: block; }
+  .practice-hero h1 { margin: 44px 0 24px; font-size: 36px; line-height: 1.4; }
+  .hero-copy p { font-size: 18px; line-height: 1.7; }
+  .hero-image-wrap { margin-top: 36px; border-radius: 19px; }
+  .stats-card { margin-top: 32px; flex-direction: column; align-items: stretch; padding: 7px 17px; }
+  .stat { padding: 11px 0; }
+  .stat + .stat { border-left: 0; border-top: 1px solid #ddd; }
+}

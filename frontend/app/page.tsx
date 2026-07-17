@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Navbar from '@/components/common/Navbar';
 import Footer from '@/components/common/Footer';
 
 // ─────────────────────────────────────────────
@@ -590,7 +589,6 @@ function TestimonialsSection() {
 export default function HomePage() {
   return (
     <main className="min-h-screen">
-      <Navbar />
       <HeroSection />
       <TrustSection />
       <FeaturesSection />
