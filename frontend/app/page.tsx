@@ -8,7 +8,7 @@ function HeroSection() {
   return (
     <section className="bg-[#F5F3FF] overflow-hidden">
       <div className="pl-[110px] pr-[10px] pt-[12px]">
-        <div className="flex items-center min-h-[526px]">
+        <div className="flex items-center min-h-[486px]">
 
           {/* ── Left Content ── */}
           <div className="w-[44%] py-14 pr-6 flex-shrink-0">
@@ -159,23 +159,24 @@ function HeroSection() {
 // ─────────────────────────────────────────────
 function TrustSection() {
   return (
-    <section className="py-10 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <p className="text-center text-gray-700 font-semibold text-[15px] mb-5">
+    <section className="bg-white mt-[80px]">
+      <div className="px-[110px] min-h-[154px] flex flex-col justify-center gap-[27px]">
+        <p className="text-center font-bold text-[25px] leading-none">
           Trusted by 50,000+ students worldwide
         </p>
-        <div className="border border-gray-200 rounded-xl py-4 px-4 flex items-center justify-around divide-x divide-gray-200">
+        <div className="border border-gray-200 rounded-[7px] py-[10px] px-[7px] flex items-center justify-center min-h-[107px]" style={{ boxShadow: '1px 1px 12px 0px rgba(0,0,0,0.25)' }}>
+          <div className="flex items-center justify-evenly w-full">
 
           {/* Pearson PTE */}
-          <div className="flex items-center gap-2 px-6">
+          <div className="flex items-center gap-2">
             <div className="w-5 h-5 rounded bg-blue-700 flex items-center justify-center">
               <span className="text-white text-[7px] font-bold">P</span>
             </div>
-            <span className="text-gray-600 font-semibold text-sm">Pearson | PTE</span>
+            <span className="font-bold text-[15px] leading-none text-black">Pearson | PTE</span>
           </div>
 
           {/* British Council */}
-          <div className="flex items-center gap-2 px-6">
+          <div className="flex items-center gap-2">
             <div className="w-5 h-3.5 flex-shrink-0 overflow-hidden rounded-sm">
               <div className="w-full h-full bg-blue-800 relative">
                 <div className="absolute inset-0 flex flex-col">
@@ -190,25 +191,26 @@ function TrustSection() {
                 </div>
               </div>
             </div>
-            <span className="text-gray-600 font-semibold text-sm">BRITISH COUNCIL</span>
+            <span className="font-bold text-[15px] leading-none text-black">BRITISH COUNCIL</span>
           </div>
 
           {/* Global Opportunities */}
-          <div className="px-6">
-            <span className="text-gray-600 font-semibold text-sm">Global Opportunities</span>
+          <div>
+            <span className="font-bold text-[15px] leading-none text-black">Global Opportunities</span>
           </div>
 
           {/* IELTS */}
-          <div className="px-6">
-            <span className="text-red-500 font-bold text-sm tracking-wide">IELTS</span>
+          <div>
+            <span className="font-bold text-[15px] leading-none bg-clip-text text-transparent" style={{ backgroundImage: 'linear-gradient(97.13deg, #FF1515 12.35%, #3008F8 49.94%)' }}>IELTS</span>
           </div>
 
           {/* Language Cert */}
-          <div className="px-6">
+          <div>
             <div className="text-center">
-              <span className="text-gray-600 font-semibold text-xs block leading-tight">Language</span>
-              <span className="text-gray-500 text-[10px]">Cert</span>
+              <span className="font-bold text-[15px] leading-none text-black block">Language</span>
+              <span className="font-bold text-[15px] text-red-500">Cert</span>
             </div>
+          </div>
           </div>
         </div>
       </div>
