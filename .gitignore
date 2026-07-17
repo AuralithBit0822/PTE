@@ -26,6 +26,12 @@ Thumbs.db
 *.log
 npm-debug.log*
 
+# TypeScript build info
+*.tsbuildinfo
+
+# Design screenshots at root
+Home Page.png
+
 # Python
 *.egg-info/
 .venv/

@@ -19,6 +19,7 @@ const config: Config = {
       },
       animation: {
         'wave': 'waveBar 1.2s ease-in-out infinite',
+        'scroll': 'scroll 20s linear infinite',
       },
       keyframes: {
         waveBar: {

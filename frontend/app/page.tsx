@@ -277,38 +277,53 @@ const features = [
       </svg>
     ),
   },
+  {
+    title: 'Coming Soon',
+    description:
+      'More exciting features are on the way. Stay tuned for updates that will enhance your learning experience.',
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+          d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+      </svg>
+    ),
+  },
 ];
 
 function FeaturesSection() {
   return (
-    <section className="py-14 bg-white">
+    <section className="py-14 bg-white mt-[40px]">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-center text-2xl font-bold text-gray-900 mb-10">
+        <h2 className="text-center text-2xl font-bold text-black mb-10">
           Everything You Need To Achieve Your{' '}
-          <span className="text-indigo-600">Target Score</span>
+          <span className="text-[#3008F8]">Target Score</span>
         </h2>
 
-        {/* Cards Grid */}
-        <div className="grid grid-cols-5 gap-4 mb-6">
-          {features.map((feature, i) => (
-            <div
-              key={i}
-              className="border border-gray-200 rounded-xl p-5 hover:shadow-md hover:border-indigo-200 transition-all duration-200 cursor-pointer"
-            >
-              <div className="w-10 h-10 rounded-lg bg-indigo-50 flex items-center justify-center text-indigo-600 mb-4">
-                {feature.icon}
+        {/* Cards Carousel */}
+        <div className="relative mb-6 py-4 px-4">
+          {/* Left fade */}
+          <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+          {/* Right fade */}
+          <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+          <div className="overflow-x-hidden">
+          <div className="flex gap-[25px] animate-scroll">
+            {[...features, ...features].map((feature, i) => (
+              <div
+                key={i}
+                className="border border-gray-200 rounded-[10px] p-[10px] hover:border-indigo-200 transition-all duration-200 cursor-pointer w-[237px] h-[180px] flex-shrink-0 flex flex-col"
+                style={{ boxShadow: '0px 4px 12px 2px rgba(0,0,0,0.25)' }}
+              >
+                <div className="mt-[2px] w-[50px] h-[50px] rounded-lg flex items-center justify-center text-indigo-600 mb-[17px]" style={{ backgroundColor: '#3008F826' }}>
+                  {feature.icon}
+                </div>
+                <h3 className="font-semibold text-black text-[17px] leading-none mb-[10px]">{feature.title}</h3>
+                <p className="text-black text-[12px] font-normal leading-none mt-auto pb-[3px]">{feature.description}</p>
               </div>
-              <h3 className="font-bold text-gray-900 text-sm mb-2 leading-snug">{feature.title}</h3>
-              <p className="text-gray-500 text-xs leading-relaxed">{feature.description}</p>
-            </div>
-          ))}
+            ))}
+          </div>
+          </div>
         </div>
 
-        {/* Carousel Dots */}
-        <div className="flex justify-center gap-2">
-          <div className="w-5 h-2 rounded-full bg-indigo-600" />
-          <div className="w-2 h-2 rounded-full bg-gray-300" />
-        </div>
       </div>
     </section>
   );

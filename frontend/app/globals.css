@@ -53,6 +53,15 @@
   background-size: 20px 20px;
 }
 
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1572px);
+  }
+}
+
 /* ── Practice Page (Plain CSS) ── */
 .practice-page { min-height: 100vh; background: #fff; }
 
