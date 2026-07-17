@@ -7,8 +7,8 @@ import Footer from '@/components/common/Footer';
 function HeroSection() {
   return (
     <section className="bg-[#F5F3FF] overflow-hidden">
-      <div className="px-[110px] pt-[12px]">
-        <div className="flex items-center min-h-[316px]">
+      <div className="pl-[110px] pr-[10px] pt-[12px]">
+        <div className="flex items-center min-h-[526px]">
 
           {/* ── Left Content ── */}
           <div className="w-[44%] py-14 pr-6 flex-shrink-0">
@@ -69,13 +69,13 @@ function HeroSection() {
           </div>
 
           {/* ── Right: Hero Image + Floating Cards ── */}
-          <div className="w-[56%] relative h-[460px] flex-shrink-0">
+          <div className="w-[684px] relative h-[316px] flex-shrink-0 overflow-visible">
 
             {/* Dotted pattern decoration */}
             <div className="absolute right-0 top-8 w-48 h-48 hero-dots opacity-60 rounded-full" />
 
             {/* Floating Card: Speaking Practice */}
-            <div className="absolute top-10 left-6 z-20 bg-white rounded-xl shadow-lg px-3 py-2.5 flex items-center gap-2.5 border border-gray-100">
+            <div className="absolute top-0 left-0 z-20 bg-white rounded-xl shadow-lg px-3 py-2.5 flex items-center gap-2.5 border border-gray-100 w-[162px]">
               <div className="w-7 h-7 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0">
                 <svg className="w-3.5 h-3.5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
@@ -89,7 +89,7 @@ function HeroSection() {
             </div>
 
             {/* Floating Card: Mock Test (top right) */}
-            <div className="absolute top-12 right-6 z-20 bg-white rounded-xl shadow-lg px-3 py-2.5 border border-gray-100">
+            <div className="absolute top-0 right-0 z-20 bg-white rounded-xl shadow-lg px-3 py-2.5 border border-gray-100 w-[162px]">
               <div className="flex items-center gap-1.5 mb-1">
                 <svg className="w-3 h-3 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
@@ -108,13 +108,12 @@ function HeroSection() {
             </div>
 
             {/* Hero Image */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10">
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10 w-[717px] h-[361px]">
               <Image
                 src="/images/ChatGPT Image Jun 1, 2026, 03_21_42 PM 1.png"
                 alt="Student practicing PTE with AI-powered tools"
-                width={490}
-                height={420}
-                className="object-contain"
+                fill
+                className="object-contain rounded-tl-[15px] rounded-tr-[35px] rounded-br-[15px] rounded-bl-[35px]"
                 priority
               />
             </div>
