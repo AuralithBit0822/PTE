@@ -1,10 +1,12 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
-  const [activeLink, setActiveLink] = useState('Home');
+  const pathname = usePathname();
 
   const navLinks = [
     { name: 'Home', href: '/' },
@@ -15,23 +17,15 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-[#F5F3FF] sticky top-0 z-50">
-      <div className="h-[88px] px-[165px] flex items-center justify-between gap-[10px]">
+    <nav className="w-full bg-[#F5F3FF] sticky top-0 z-50">
+      <div className="h-[65px] px-8 flex items-center justify-between gap-8">
 
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-9 h-9 rounded-full bg-indigo-600 flex items-center justify-center shadow-sm group-hover:bg-indigo-700 transition-colors">
-            {/* Graduation cap icon */}
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"
-                fill="white"
-              />
-            </svg>
-          </div>
-          <span className="text-[21px] font-extrabold tracking-tight">
+          <Image src="/images/PTElogo.png" alt="PTE Prep" width={50} height={50} className="rounded-full bg-[rgba(74,45,219,0.2)]" />
+          <span className="text-[22px] font-[800] tracking-tight">
             <span className="text-indigo-600">PTE.</span>
-            <span className="text-gray-800">Prep</span>
+            <span className="text-indigo-600">Prep</span>
           </span>
         </Link>
 
@@ -41,9 +35,8 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              onClick={() => setActiveLink(link.name)}
-              className={`text-[17px] font-bold pb-0.5 transition-all duration-150 ${
-                activeLink === link.name
+              className={`text-[20px] font-bold pb-0.5 transition-all duration-150 ${
+                pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href))
                   ? 'text-indigo-600 border-b-2 border-indigo-600'
                   : 'text-indigo-600 hover:text-indigo-700 border-b-2 border-transparent'
               }`}
@@ -56,7 +49,7 @@ export default function Navbar() {
         {/* Right: Search + Buttons */}
         <div className="flex items-center gap-3">
           {/* Search Bar */}
-          <div className="flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-lg px-3 py-[7px] hover:border-indigo-300 transition-colors">
+          <div className="flex items-center gap-9 bg-gray-50 border border-gray-200 rounded-lg px-3 py-[7px] hover:border-indigo-300 transition-colors">
             <input
               type="text"
               placeholder="Search here...."

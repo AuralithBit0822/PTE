@@ -55,17 +55,45 @@
 
 /* ── Practice Page (Plain CSS) ── */
 .practice-page { min-height: 100vh; background: #fff; }
-.practice-hero { background: rgba(246, 244, 253, 1); min-height: 675px; padding: 37px clamp(24px, 4vw, 80px) 38px clamp(24px, 4vw, 80px); }
-.practice-hero .hero-grid { width: 100%; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; align-items: center; }
-.hero-copy { align-self: stretch; position: relative; padding-top: 2px; }
-.breadcrumbs { display: flex; align-items: center; gap: 13px; font-size: 20px; font-weight: 700; }
-.chevron { font-size: 37px; line-height: 15px; font-weight: 400; color: #3b3b3b; }
-.practice-hero h1 { margin: 91px 0 80px; font-size: clamp(36px, 2.4vw, 45px); letter-spacing: .2px; line-height: 1.72; font-weight: 800; }
+
+/* ── Hero: rebuilt sizing so it fits one viewport like the Figma design ── */
+.practice-hero {
+  background: rgba(246, 244, 253, 1);
+  padding: 28px 2rem 32px;
+}
+.practice-hero .hero-grid {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  align-items: stretch;  
+  padding: 0;
+}
+.hero-copy { align-self: stretch; position: relative; padding-top: 0; display: flex; flex-direction: column; justify-content: space-between; }
+.breadcrumbs { display: flex; align-items: center; gap: 8px; font-size: 20px; font-weight: 600; line-height: 50px; }
+.breadcrumbs a { color: inherit; text-decoration: none; }
+.chevron { font-size: 18px; line-height: 1; font-weight: 400; color: #6b6b6b; }
+.practice-hero h1 { margin: 28px 0 20px; font-size: 42px; letter-spacing: 2%; line-height: 70px; font-weight: 800; }
 .practice-hero h1 em { color: #2e10f2; font-style: normal; }
-.hero-copy p { margin: 0; color: #383838; font-size: 24px; line-height: 1.92; font-weight: 500; }
-.hero-image-wrap { width: 100%; overflow: hidden; border-radius: 28px; }
-.hero-image-wrap img { display: block; width: 80%; height: auto; margin-left: auto; }
-.stats-card { width: calc(145% + 10px); min-height: 95px; background: #fff; border: 1px solid #e6e6ee; border-radius: 12px; box-shadow: 0 8px 24px rgba(33,25,138,0.06); display: flex; align-items: center; padding: 14px 16px; margin-top: 80px; gap: 8px; }
+.hero-copy p { margin: 0 0 32px; color: #383838; font-size: 18px; line-height: 28px; font-weight: 500; letter-spacing: 0%; }
+
+/* Image: show full height */
+.hero-image-wrap {
+  width: 100%;
+  border-radius: 18px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.hero-image-wrap img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.stats-card { width: 700px; height: 82px; min-height: 0; background: #fff; border: 1.5px solid #e6e6ee; border-radius: 10px; box-shadow: 0 8px 24px rgba(33,25,138,0.06); display: flex; align-items: center; padding: 5px; gap: 20px; }
 .stat { min-width: 0; flex: 1; display: flex; align-items: center; gap: 10px; padding: 0 12px; }
 .stat + .stat { border-left: 1px solid #909090; }
 .stat-icon { width: 42px; height: 42px; background: #e4e0ff; border-radius: 50%; display: grid; place-items: center; flex: 0 0 auto; }
@@ -76,7 +104,7 @@
 
 .content-section { max-width: 1320px; margin: 0 auto; padding: 2.5rem 6rem; }
 .outline-link, .text-link { color: #2e10f2; font-weight: 700; background: transparent; border: none; cursor: pointer; }
-.question-grid { display: grid; grid-template-columns: repeat(3, minmax(240px, 1fr)); gap: 1.5rem; }
+.question-grid { display: grid; grid-template-columns: repeat(5, minmax(180px, 1fr)); gap: 1.5rem; }
 .question-card { background: #fff; border: 1px solid #ebecff; border-radius: 24px; padding: 2rem; display: flex; flex-direction: column; gap: 1rem; min-height: 310px; }
 .card-icon { width: 52px; height: 52px; border-radius: 18px; display: grid; place-items: center; background: rgba(110, 80, 255, 0.1); font-size: 1.4rem; }
 .question-card h3 { margin: 0; font-size: 1.2rem; }
@@ -99,9 +127,6 @@
 .recent-row h3 { margin: 0; font-size: 1rem; }
 .recent-row p { margin: 0.35rem 0 0; color: #6c6c8d; font-size: 0.95rem; }
 .performance-main { display: grid; grid-template-columns: minmax(170px, 200px) 1fr; gap: 1.5rem; align-items: center; }
-.donut { width: min(200px, 100%); aspect-ratio: 1; border-radius: 50%; background: linear-gradient(180deg, #f6f3ff 0%, #fff 100%); display: grid; place-items: center; }
-.donut b { display: block; font-size: 2.1rem; margin-bottom: 0.3rem; }
-.donut small { color: #6f6f92; }
 .metrics { display: grid; gap: 1rem; }
 .metric { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1rem 1.2rem; background: #faf8ff; border-radius: 18px; }
 .metric span { color: #4c4c6a; }
@@ -116,17 +141,82 @@
 .daily-banner p { margin: 0; color: #4f4f6c; line-height: 1.65; }
 
 @media (max-width: 1200px) {
-  .practice-hero { padding-top: 70px; }
-  .practice-hero .hero-grid { grid-template-columns: 1fr 1fr; }
-  .practice-hero h1 { margin-top: 62px; line-height: 1.5; }
+  .practice-hero { padding-top: 40px; }
+  .practice-hero .hero-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .practice-hero h1 { margin-top: 20px; }
+  .question-grid { grid-template-columns: repeat(3, minmax(200px, 1fr)); }
 }
 @media (max-width: 800px) {
-  .practice-hero { padding: 42px 0; min-height: 0; }
-  .practice-hero .hero-grid { width: min(100% - 32px, 600px); display: block; }
-  .practice-hero h1 { margin: 44px 0 24px; font-size: 36px; line-height: 1.4; }
-  .hero-copy p { font-size: 18px; line-height: 1.7; }
-  .hero-image-wrap { margin-top: 36px; border-radius: 19px; }
-  .stats-card { margin-top: 32px; flex-direction: column; align-items: stretch; padding: 7px 17px; }
+  .practice-hero { padding: 32px 0; }
+  .practice-hero .hero-grid { width: min(100% - 32px, 600px); display: block; margin: 0 auto; }
+  .practice-hero h1 { margin: 20px 0 16px; font-size: 30px; line-height: 1.35; }
+  .hero-copy p { font-size: 16px; line-height: 1.6; }
+  .hero-image-wrap { margin-top: 28px; border-radius: 19px; max-height: 320px; justify-content: center; }
+  .stats-card { margin-top: 24px; flex-direction: column; align-items: stretch; padding: 7px 17px; }
   .stat { padding: 11px 0; }
   .stat + .stat { border-left: 0; border-top: 1px solid #ddd; }
+  .question-grid { grid-template-columns: 1fr; }
 }
+
+/* Section headings */
+.section-heading { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; gap: 1rem; }
+.section-heading h2 { margin: 0; font-size: clamp(1.4rem, 2vw, 1.8rem); font-weight: 800; }
+
+/* Icons: unify sizing for the inline SVGs used across the page */
+.stat-icon svg,
+.card-icon svg,
+.mode-icon svg,
+.recent-icon svg,
+.daily-icon svg,
+.great-job span svg,
+.outline-link svg,
+.card-meta svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.card-icon svg, .mode-icon svg { width: 26px; height: 26px; color: #2e10f2; }
+.recent-icon svg { width: 20px; height: 20px; color: #2e10f2; }
+.daily-icon svg { width: 26px; height: 26px; }
+.great-job span svg { width: 22px; height: 22px; color: #2e10f2; }
+
+/* "View Performance" pill button */
+.outline-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  border: 1px solid #ddd8fb; border-radius: 10px;
+  padding: 0.65rem 1.1rem; font-size: 0.95rem;
+}
+.outline-link svg { width: 16px; height: 16px; }
+
+/* "10 Questions" meta row on question cards */
+.card-meta { display: flex; align-items: center; gap: 6px; color: #6c6c8d; font-size: 0.85rem; font-weight: 500; }
+.card-meta svg { width: 15px; height: 15px; }
+
+/* Colored dot next to each performance metric label */
+.metric-label { display: flex; align-items: center; gap: 8px; color: #4c4c6a; }
+.dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; flex: 0 0 auto; }
+
+/* Real ring donut */
+.donut {
+  width: min(200px, 100%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.donut::before {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  background: #fff;
+  border-radius: 50%;
+}
+.donut b, .donut small { position: relative; z-index: 1; }
+.donut b { display: block; font-size: 2.1rem; margin-bottom: 0.3rem; }
+.donut small { color: #6f6f92; }
+
+/* Floating icons over hero image */
+.hero-image-wrap { position: relative; }
