@@ -7,8 +7,8 @@ import Footer from '@/components/common/Footer';
 function HeroSection() {
   return (
     <section className="bg-[#F5F3FF] overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center min-h-[520px]">
+      <div className="px-[110px] pt-[12px]">
+        <div className="flex items-center min-h-[316px]">
 
           {/* ── Left Content ── */}
           <div className="w-[44%] py-14 pr-6 flex-shrink-0">

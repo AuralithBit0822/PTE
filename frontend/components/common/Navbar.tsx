@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-[#F5F3FF] sticky top-0 z-50">
-      <div className="h-[88px] px-[165px] flex items-center justify-between gap-[10px]">
+      <div className="h-[59px] px-[110px] flex items-center justify-between gap-[7px]">
 
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
