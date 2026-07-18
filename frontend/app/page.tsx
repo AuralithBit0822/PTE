@@ -338,17 +338,17 @@ const WAVE_HEIGHTS = [4, 8, 14, 20, 28, 32, 28, 22, 16, 24, 32, 28, 20, 12, 18, 
 
 function MockTestSection() {
   return (
-    <section className="py-6 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="rounded-2xl overflow-hidden flex min-h-[300px]">
+    <section className="bg-white pl-[110px] pr-[60px] py-[25px]">
+      <div className="w-full rounded-2xl overflow-hidden" style={{ boxShadow: '1px 1px 12px 0px #3008F833' }}>
+        <div className="flex h-[301px] gap-[3px]">
 
           {/* ── Left Panel: Dark Indigo ── */}
-          <div className="w-[36%] bg-gradient-to-br from-indigo-900 via-indigo-800 to-indigo-900 p-10 flex flex-col justify-between">
+          <div className="w-[calc(36%-100px)] bg-[#3008F8] p-[27px] flex flex-col justify-between">
             <div>
-              <h2 className="text-2xl font-bold text-white mb-7 leading-snug">
-                Mock Test<br />Experience
+              <h2 className="text-[25px] font-bold text-white mb-[27px] leading-none font-[family-name:var(--font-inter)]">
+                Mock Test Experience
               </h2>
-              <ul className="space-y-3.5 mb-8">
+              <ul className="space-y-[11px] mb-[17px]">
                 {[
                   'Real Exam Simulation',
                   'Timed Practice',
@@ -356,9 +356,9 @@ function MockTestSection() {
                   'Detailed Analytics',
                   'Improving Weakness',
                 ].map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-indigo-100 text-[13px]">
-                    <div className="w-5 h-5 rounded-full bg-indigo-600 flex items-center justify-center flex-shrink-0">
-                      <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <li key={item} className="flex items-center gap-[8px] text-white text-[18px] font-medium leading-none">
+                    <div className="w-[13px] h-[13px] rounded-full bg-indigo-600 flex items-center justify-center flex-shrink-0">
+                      <svg className="w-[9px] h-[9px] text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
@@ -369,36 +369,38 @@ function MockTestSection() {
             </div>
             <button
               id="mock-test-try-free"
-              className="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2.5 rounded-lg text-sm font-semibold transition-colors self-start"
+              className="bg-emerald-500 hover:bg-emerald-600 text-white px-[42px] py-[12px] rounded-[7px] text-[18px] font-semibold transition-colors self-start"
             >
               Try for free mock test
             </button>
           </div>
 
           {/* ── Right Panel: Test Interface ── */}
-          <div className="w-[64%] bg-gray-50 p-6 flex flex-col justify-center">
-            <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-5">
+          <div className="flex-1 bg-gray-50 pt-[10px] px-[16px] pb-[16px] flex flex-col justify-start overflow-hidden">
+            <div className="bg-gray-50 pt-[0px] pb-[13px] px-[13px] overflow-hidden">
 
               {/* Test Header */}
-              <div className="flex items-center justify-between mb-4 pb-3 border-b border-gray-100">
-                <div className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="flex items-center pb-[7px]">
+                <div className="flex items-center gap-[7px]">
+                  <svg className="w-[20px] h-[20px] text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                       d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                   </svg>
-                  <span className="text-sm font-semibold text-gray-800">PTE Full Length Test</span>
+                  <span className="text-[17px] font-extrabold text-gray-900">PTE Full Length Test</span>
                 </div>
-                <div className="flex items-center gap-4">
-                  <div className="flex items-center gap-1.5 text-indigo-600">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="flex-1 flex justify-center">
+                  <div className="flex items-center gap-[5px] text-gray-900">
+                    <svg className="w-[20px] h-[20px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                         d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-sm font-mono font-bold text-indigo-600">01:20:35</span>
+                    <span className="text-[17px] font-mono font-extrabold text-gray-900">01:20:35</span>
                   </div>
-                  <span className="text-[11px] text-gray-500">Question of 11 of 20</span>
-                  <button className="text-indigo-600 hover:text-indigo-800 transition-colors">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                </div>
+                <div className="flex items-center gap-[10px]">
+                  <span className="text-[18px] text-gray-900">Question of 11 of 20</span>
+                  <button className="text-gray-900 hover:text-gray-700 transition-colors">
+                    <svg className="w-[20px] h-[20px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </button>
@@ -406,19 +408,19 @@ function MockTestSection() {
               </div>
 
               {/* Question Info */}
-              <div className="mb-3">
-                <h3 className="text-sm font-bold text-gray-900 mb-0.5">Summarize Spoken Test</h3>
-                <p className="text-[11px] text-gray-500">You will hear a recording. Type the summary you hear</p>
+              <div className="mt-[5px] mb-[10px]">
+                <h3 className="text-[15px] font-bold text-gray-900 mb-[3px]">Summarize Spoken Test</h3>
+                <p className="text-[12px] text-gray-900">You will hear a recording. Type the summary you hear</p>
               </div>
 
               {/* Audio Waveform */}
-              <div className="bg-gray-50 rounded-lg p-3 mb-3 flex items-center gap-3">
-                <div className="flex-1 flex items-end gap-[2px] h-10">
+              <div className="bg-gray-50 p-[7px] mt-[20px] mb-[30px] flex items-center gap-[7px]">
+                <div className="flex-1 flex items-end gap-[1px] h-[27px]">
                   {WAVE_HEIGHTS.map((h, i) => (
                     <div
                       key={i}
                       style={{
-                        height: `${h}px`,
+                        height: `${h * 0.6667}px`,
                         animationDelay: `${(i % 8) * 0.15}s`,
                       }}
                       className={`flex-1 rounded-full ${
@@ -430,20 +432,20 @@ function MockTestSection() {
                   ))}
                 </div>
                 {/* Controls */}
-                <div className="flex items-center gap-2 flex-shrink-0">
+                <div className="flex items-center gap-[5px] flex-shrink-0">
                   <button
                     aria-label="Clear recording"
-                    className="w-7 h-7 rounded-full border border-gray-300 flex items-center justify-center text-gray-400 hover:border-red-400 hover:text-red-400 transition-colors"
+                    className="w-[18px] h-[18px] rounded-full border border-gray-300 flex items-center justify-center text-gray-400 hover:text-red-400 transition-colors"
                   >
-                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-[9px] h-[9px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                     </svg>
                   </button>
                   <button
                     aria-label="Confirm recording"
-                    className="w-7 h-7 rounded-full border border-gray-300 flex items-center justify-center text-gray-400 hover:border-green-400 hover:text-green-400 transition-colors"
+                    className="w-[18px] h-[18px] rounded-full border border-gray-300 flex items-center justify-center text-gray-400 hover:text-green-400 transition-colors"
                   >
-                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-[9px] h-[9px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                     </svg>
                   </button>
@@ -452,16 +454,16 @@ function MockTestSection() {
 
               {/* Answer Text Area */}
               <textarea
-                className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-xs text-gray-400 outline-none resize-none h-[60px] focus:border-indigo-300 transition-colors placeholder-gray-300 bg-white"
+                className="w-full border border-gray-200 rounded-[5px] bg-white px-[15px] py-[15px] text-[12px] text-gray-400 outline-none resize-none h-[56px] placeholder-gray-300"
                 placeholder="Type your answer here..."
                 readOnly
               />
 
               {/* Next Button */}
-              <div className="flex justify-end mt-3">
+              <div className="flex justify-end mt-[7px]">
                 <button
                   id="mock-test-next"
-                  className="bg-indigo-600 text-white px-6 py-2 rounded-lg text-sm font-semibold hover:bg-indigo-700 transition-colors"
+                  className="bg-indigo-600 text-white px-[32px] py-[5px] rounded-[5px] text-[15px] font-semibold hover:bg-indigo-700 transition-colors"
                 >
                   Next
                 </button>
