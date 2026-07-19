@@ -217,7 +217,7 @@ export default function PracticePage() {
         <article className="dashboard-card performance-card">
           <div className="card-heading">
             <h2>Overall Performance</h2>
-            <button className="view-all">This Month ⌄</button>
+            <button className="view-all">This Month <svg className="chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
           </div>
           <div className="performance-main">
             <div
