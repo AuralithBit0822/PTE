@@ -2,12 +2,39 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
-const footerColumns = {
-  Platform: ['Practice', 'Mock Test', 'Courses', 'Speaking Practice', 'Vocabulary'],
-  Courses: ['PTE Courses', 'Beginner Courses', 'Advance Courses', 'Free Courses', 'Live Courses'],
-  Resources: ['Study Guide', 'Sample Questions', 'Score Guide', 'Blogs and Tips', 'About Us'],
-  Support: ['Help Center', 'FAQ', 'Privacy Policy', 'Terms of Services', 'Contact Us'],
+type LinkItem = { label: string; icon?: string };
+
+const footerColumns: Record<string, LinkItem[]> = {
+  Platform: [
+    { label: 'Practice', icon: '/images/Group 10.png' },
+    { label: 'Mock Test', icon: '/images/Vector (1).png' },
+    { label: 'Study Plan', icon: '/images/Group.png' },
+    { label: 'Speaking Practice', icon: '/images/Group (1).png' },
+    { label: 'Vocabulary', icon: '/images/Vector (1).png' },
+  ],
+  Courses: [
+    { label: 'PTE Courses', icon: '/images/Vector (2).png' },
+    { label: 'Beginner Courses', icon: '/images/Vector (2).png' },
+    { label: 'Advance Courses', icon: '/images/Vector (2).png' },
+    { label: 'Free Courses', icon: '/images/Vector (2).png' },
+    { label: 'Live Courses', icon: '/images/Vector (2).png' },
+  ],
+  Resources: [
+    { label: 'Study Guide', icon: '/images/Group.png' },
+    { label: 'Sample Questions', icon: '/images/Vector (4).png' },
+    { label: 'Download', icon: '/images/Vector (3).png' },
+    { label: 'Blogs and Tips', icon: '/images/Vector (4).png' },
+    { label: 'About Us', icon: '/images/Vector (4).png' },
+  ],
+  Support: [
+    { label: 'Help Center', icon: '/images/Vector (5).png' },
+    { label: 'FAQ', icon: '/images/Vector (6).png' },
+    { label: 'Privacy Policy', icon: '/images/Vector (7).png' },
+    { label: 'Terms of Services', icon: '/images/Vector (4).png' },
+    { label: 'Contact Us', icon: '/images/Vector (4).png' },
+  ],
 };
 
 export default function Footer() {
@@ -23,20 +50,15 @@ export default function Footer() {
           <div className="col-span-1">
             {/* Logo */}
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-full bg-indigo-600 flex items-center justify-center">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"
-                    fill="white"
-                  />
-                </svg>
+              <div className="w-12 h-12 rounded-full bg-[#3008F8] flex items-center justify-center overflow-hidden flex-shrink-0">
+                <Image src="/images/PTElogo.png" alt="PTE Prep Logo" width={48} height={48} className="rounded-full object-cover" />
               </div>
-              <span className="text-[15px] font-bold">
-                <span className="text-indigo-600">PTE.</span>
-                <span className="text-gray-800">Prep</span>
+              <span className="text-[17px] font-bold">
+                <span className="text-gray-900">PTE.</span>
+                <span className="text-gray-900">Prep</span>
               </span>
             </div>
-            <p className="text-[13px] text-gray-500 leading-relaxed mb-5">
+            <p className="text-[15px] text-gray-900 leading-relaxed mb-5">
               Your complete PTE preparation partner. Practice daily, Achieve your target score with
               confidence.
             </p>
@@ -90,24 +112,34 @@ export default function Footer() {
 
           {/* Link Columns */}
           {Object.entries(footerColumns).map(([category, links]) => (
-            <div key={category}>
-              <h4 className="font-semibold text-gray-900 text-sm mb-4">{category}</h4>
+            <div key={category} className="border-l border-gray-300 pl-6">
+              <h4 className="font-bold text-gray-900 text-[21px] mb-4">{category}</h4>
               <ul className="space-y-2.5">
-                {links.map((link) => (
-                  <li key={link}>
+                {links.map((item) => (
+                  <li key={item.label}>
                     <Link
                       href="#"
-                      className="text-[13px] text-gray-500 hover:text-indigo-600 transition-colors flex items-center gap-1.5"
+                      className="text-[15px] text-gray-900 hover:text-indigo-600 transition-colors flex items-center gap-1.5"
                     >
-                      <svg
-                        className="w-3 h-3 text-indigo-400 flex-shrink-0"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                      </svg>
-                      {link}
+                      {item.icon ? (
+                        <Image
+                          src={item.icon}
+                          alt=""
+                          width={14}
+                          height={14}
+                          className="flex-shrink-0"
+                        />
+                      ) : (
+                        <svg
+                          className="w-3 h-3 text-indigo-400 flex-shrink-0"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                        </svg>
+                      )}
+                      {item.label}
                     </Link>
                   </li>
                 ))}
@@ -117,67 +149,66 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="pt-6 mb-5">
-          <div className="grid grid-cols-2 gap-8">
-            {/* Security Badge */}
-            <div className="flex items-start gap-3">
+        <div className="flex items-center gap-[107px] mb-5">
+          {/* Card 1: Security Badge */}
+          <div className="flex items-center gap-3 h-[77px] rounded-[10px] bg-white border border-gray-200 px-[27px]" style={{ boxShadow: '1px 1px 10px 0px #00000033' }}>
               <div className="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0">
                 <svg className="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-                  />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                 </svg>
               </div>
               <div>
                 <p className="font-semibold text-sm text-gray-900">100% Secure & Trusted</p>
-                <p className="text-xs text-gray-500 mt-0.5 leading-relaxed">
-                  Your data is safe with us. We never share your information.
-                </p>
-              </div>
+                <p className="text-xs text-gray-500 mt-[1px] leading-relaxed">Your data is safe with us. We never share your information.</p>
             </div>
+          </div>
 
-            {/* Stay Updated */}
-            <div className="flex items-start gap-3">
+          {/* Card 2: Stay Updated */}
+          <div className="flex items-center gap-3 h-[77px] rounded-[10px] bg-white border border-gray-200 px-[27px]" style={{ boxShadow: '1px 1px 10px 0px #00000033' }}>
+            <div className="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0">
+              <svg className="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div>
+              <p className="font-semibold text-sm text-gray-900">Stay Updated</p>
+              <p className="text-xs text-gray-500 mt-[1px] leading-relaxed">Subscribe to get the latest tips, free materials and exclusive offers.</p>
+            </div>
+          </div>
+
+          {/* Card 3: Email + Subscribe */}
+          <div className="flex items-center gap-3 h-[77px] rounded-[10px] bg-[#F5F3FF] px-[27px] flex-shrink-0">
               <div className="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0">
                 <svg className="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
-              <div className="flex-1">
-                <p className="font-semibold text-sm text-gray-900 mb-2">Stay Updated</p>
-                <div className="flex gap-2">
-                  <input
-                    id="footer-email"
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Enter your email..."
-                    className="flex-1 px-3 py-2 text-sm border border-gray-200 rounded-lg outline-none focus:border-indigo-400 bg-white placeholder-gray-400 transition-colors"
-                  />
-                  <button
-                    onClick={() => setEmail('')}
-                    className="px-4 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition-colors"
-                  >
-                    Subscribe
-                  </button>
-                </div>
+              <div className="flex items-center gap-2 flex-1">
+                <input
+                  id="footer-email"
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email..."
+                  className="flex-1 px-3 py-2 text-sm border border-gray-200 rounded-lg outline-none focus:border-indigo-400 bg-white placeholder-gray-400 transition-colors"
+                />
+                <button
+                  onClick={() => setEmail('')}
+                  className="px-4 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition-colors"
+                >
+                  Subscribe
+                </button>
               </div>
             </div>
           </div>
-        </div>
 
         {/* Copyright Bar */}
         <div className="w-full h-[53px] rounded-[10px] bg-[#3008F826] pt-[10px] pb-[10px] pl-[27px] pr-[27px] flex items-center justify-between mt-[10px]">
-          <p className="text-xs text-gray-400">© 2026 PTE Prep. All right reserved.</p>
-          <p className="text-xs text-gray-400">Made with passion for your success</p>
+          <p className="text-[14px] text-gray-900">© 2026 PTE Prep. All right reserved.</p>
+          <p className="text-[14px] text-gray-900">Made with passion for your success</p>
         </div>
       </div>
     </footer>
