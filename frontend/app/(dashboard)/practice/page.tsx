@@ -75,10 +75,10 @@ function RobotIcon() {
   return <svg viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="12" rx="3" /><circle cx="9" cy="14" r="1.2" /><circle cx="15" cy="14" r="1.2" /><path d="M12 8V4m0 0h-2m2 0h2" /></svg>;
 }
 function ClockIcon() {
-  return <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 3" /></svg>;
+  return <svg viewBox="2 2 20 20"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 3" /></svg>;
 }
 function SlidersIcon() {
-  return <svg viewBox="0 0 24 24"><path d="M4 6h10M17 6h3M4 12h4M11 12h9M4 18h13" /><circle cx="14" cy="6" r="2" /><circle cx="7" cy="12" r="2" /><circle cx="17" cy="18" r="2" /></svg>;
+  return <svg viewBox="2 3 19 17"><path d="M4 6h10M17 6h3M4 12h4M11 12h9M4 18h13" /><circle cx="14" cy="6" r="2" /><circle cx="7" cy="12" r="2" /><circle cx="17" cy="18" r="2" /></svg>;
 }
 function TargetIcon() {
   return <svg viewBox="0 0 24 24"><circle cx="11" cy="13" r="8" /><circle cx="11" cy="13" r="4.5" /><circle cx="11" cy="13" r="1" /><path d="M16 8l4-4m0 0h-3m3 0v3" /></svg>;
@@ -170,14 +170,20 @@ export default function PracticePage() {
       <section className="content-section mode-section">
         <div className="section-heading">
           <h2>Practice Options</h2>
-          <Link className="text-link" href="/practice">
+          <Link className="practice-button" href="/practice">
             Practice Now →
           </Link>
         </div>
         <div className="mode-grid">
-          {practiceModes.map(([title, description, Icon]) => (
+          {practiceModes.map(([title, description, Icon], idx) => (
             <article className="mode-card" key={title}>
-              <span className="mode-icon"><Icon /></span>
+              <span className="mode-icon">
+                {idx === 0 ? (
+                  <Image src="/images/Robot.png" alt={title} width={56} height={56} style={{ objectFit: "contain", width: "100%", height: "100%", borderRadius: "50%" }} />
+                ) : (
+                  <Icon />
+                )}
+              </span>
               <div>
                 <h3>{title}</h3>
                 <p>{description}</p>
