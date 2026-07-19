@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --brand-blue: rgba(48, 8, 248, 1);
+}
+
 @layer base {
   * {
     box-sizing: border-box;
@@ -84,7 +88,7 @@
 .breadcrumbs a { color: inherit; text-decoration: none; }
 .chevron { font-size: 18px; line-height: 1; font-weight: 400; color: #6b6b6b; }
 .practice-hero h1 { margin: 28px 0 20px; font-size: 42px; letter-spacing: 2%; line-height: 70px; font-weight: 800; }
-.practice-hero h1 em { color: #2e10f2; font-style: normal; }
+.practice-hero h1 em { color: var(--brand-blue); font-style: normal; }
 .hero-copy p { margin: 0 0 32px; color: #383838; font-size: 18px; line-height: 28px; font-weight: 500; letter-spacing: 0%; }
 
 /* Image: show full height */
@@ -106,19 +110,25 @@
 .stat { min-width: 0; flex: 1; display: flex; align-items: center; gap: 10px; padding: 0 12px; }
 .stat + .stat { border-left: 1px solid #909090; }
 .stat-icon { width: 42px; height: 42px; background: #e4e0ff; border-radius: 50%; display: grid; place-items: center; flex: 0 0 auto; }
-.stat-icon svg { width: 24px; height: 24px; fill: none; stroke: #2e10f2; stroke-width: 2.1; stroke-linecap: round; stroke-linejoin: round; }
+.stat-icon svg { width: 24px; height: 24px; fill: none; stroke: var(--brand-blue); stroke-width: 2.1; stroke-linecap: round; stroke-linejoin: round; }
 .stat strong, .stat small { display: block; }
 .stat strong { font-size: 18px; line-height: 20px; }
 .stat small { color: #414141; font-size: 13px; line-height: 16px; }
 
 .content-section { max-width: 1320px; margin: 0 auto; padding: 2.5rem 6rem; }
-.outline-link, .text-link { color: #2e10f2; font-weight: 700; background: transparent; border: none; cursor: pointer; }
-.question-grid { display: grid; grid-template-columns: repeat(5, minmax(180px, 1fr)); gap: 1.5rem; }
-.question-card { background: #fff; border: 1px solid #ebecff; border-radius: 24px; padding: 2rem; display: flex; flex-direction: column; gap: 1rem; min-height: 310px; }
-.card-icon { width: 52px; height: 52px; border-radius: 18px; display: grid; place-items: center; background: rgba(110, 80, 255, 0.1); font-size: 1.4rem; }
-.question-card h3 { margin: 0; font-size: 1.2rem; }
-.question-card p { margin: 0; color: #575771; line-height: 1.75; }
-.practice-button { margin-top: auto; display: inline-flex; align-items: center; justify-content: center; padding: 0.95rem 1.3rem; border-radius: 999px; background: #2e10f2; color: #fff; font-weight: 700; text-decoration: none; }
+.outline-link, .text-link { color: var(--brand-blue); font-weight: 700; background: transparent; border: none; cursor: pointer; }
+
+/* ── Practice by Question Type: rebuilt to match Figma (compact cards, auto-width button) ── */
+.question-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.27rem; }
+.question-card { background: #fff; border: 2px solid #b8b8c5; border-radius: 14px; padding: 0.9rem 1.1rem 0.9rem; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+.card-icon { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: rgba(48, 8, 248, 0.1); font-size: 1.1rem; margin-bottom: 0.1rem; }
+.question-card h3 { margin: 0; font-size: 1rem; font-weight: 700; line-height: 1.3; white-space: nowrap; }
+.question-card p { margin: 0; color: #424248; font-size: 0.75rem; line-height: 1.5; text-align: center; }
+.practice-button { display: inline-flex; align-items: center; justify-content: center; padding: 0.85rem 1.2rem; border-radius: 10px; background: var(--brand-blue); color: #fff; font-weight: 700; text-decoration: none; }
+.question-card .practice-button { align-self: center; width: auto; margin-top: auto; padding: 0.4rem 0.85rem; border-radius: 6px; font-size: 0.75rem; }
+.question-card .card-meta { margin-top: 0.2rem; }
+.question-section { padding-top: 4rem; padding-bottom: 4rem; }
+
 .mode-section { background: #faf8ff; }
 .mode-grid { display: grid; grid-template-columns: repeat(3, minmax(260px, 1fr)); gap: 1.5rem; }
 .mode-card { display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: start; background: #fff; border: 1px solid #ebecff; border-radius: 24px; padding: 1.8rem; }
@@ -129,7 +139,7 @@
 .dashboard-card { background: #fff; border: 1px solid #ebecff; border-radius: 28px; padding: 1.8rem; box-shadow: 0 24px 40px rgba(33, 25, 138, 0.06); }
 .card-heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1.5rem; }
 .card-heading h2 { margin: 0; font-size: 1.35rem; }
-.view-all { color: #5d4cff; border: 1px solid rgba(93, 76, 255, 0.18); border-radius: 999px; background: transparent; padding: 0.85rem 1rem; font-weight: 700; cursor: pointer; }
+.view-all { color: #5d4cff; border: 2px solid rgb(83, 81, 81); border-radius: 999px; background: transparent; padding: 0.85rem 1rem; font-weight: 700; cursor: pointer; }
 .recent-row { display: grid; grid-template-columns: auto 1fr auto; gap: 1rem; align-items: center; padding: 1rem 0; border-top: 1px solid #f3f3ff; }
 .recent-row:first-child { border-top: 0; }
 .recent-icon { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 14px; background: rgba(110, 80, 255, 0.1); font-size: 1rem; }
@@ -145,7 +155,7 @@
 .great-job strong { display: block; margin-bottom: 0.35rem; }
 
 .daily-banner { max-width: 1320px; margin: 2rem auto 4rem; padding: 1.8rem 2rem; background: rgba(110, 80, 255, 0.08); border-radius: 24px; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
-.daily-icon { display: grid; width: 60px; height: 60px; place-items: center; border-radius: 18px; background: rgba(46, 16, 242, 0.14); color: #2e10f2; font-size: 1.3rem; }
+.daily-icon { display: grid; width: 60px; height: 60px; place-items: center; border-radius: 18px; background: rgba(48, 8, 248, 0.14); color: var(--brand-blue); font-size: 1.3rem; }
 .daily-banner h3 { margin: 0 0 0.35rem; }
 .daily-banner p { margin: 0; color: #4f4f6c; line-height: 1.65; }
 
@@ -169,7 +179,7 @@
 
 /* Section headings */
 .section-heading { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; gap: 1rem; }
-.section-heading h2 { margin: 0; font-size: clamp(1.4rem, 2vw, 1.8rem); font-weight: 800; }
+.section-heading h2 { margin: 0; font-size: clamp(1.0rem, 2vw, 1.8rem); font-weight: 800; }
 
 /* Icons: unify sizing for the inline SVGs used across the page */
 .stat-icon svg,
@@ -186,10 +196,10 @@
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-.card-icon svg, .mode-icon svg { width: 26px; height: 26px; color: #2e10f2; }
-.recent-icon svg { width: 20px; height: 20px; color: #2e10f2; }
+.card-icon svg, .mode-icon svg { width: 24px; height: 24px; color: var(--brand-blue); }
+.recent-icon svg { width: 20px; height: 20px; color: var(--brand-blue); }
 .daily-icon svg { width: 26px; height: 26px; }
-.great-job span svg { width: 22px; height: 22px; color: #2e10f2; }
+.great-job span svg { width: 22px; height: 22px; color: var(--brand-blue); }
 
 /* "View Performance" pill button */
 .outline-link {
@@ -197,7 +207,7 @@
   border: 1px solid #ddd8fb; border-radius: 10px;
   padding: 0.65rem 1.1rem; font-size: 0.95rem;
 }
-.outline-link svg { width: 16px; height: 16px; }
+.outline-link svg { width: 20px; height: 20px; }
 
 /* "10 Questions" meta row on question cards */
 .card-meta { display: flex; align-items: center; gap: 6px; color: #6c6c8d; font-size: 0.85rem; font-weight: 500; }

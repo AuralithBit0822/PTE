@@ -17,15 +17,60 @@ function StarIcon() {
 function RepeatIcon() {
   return <svg viewBox="0 0 24 24"><path d="M17 2l4 4-4 4M3 11V9a4 4 0 0 1 4-4h14M7 22l-4-4 4-4M21 13v2a4 4 0 0 1-4 4H3" /></svg>;
 }
+
+// ── Solid/filled icons matching the provided reference images ──
 function ImageIcon() {
-  return <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" /><path d="M21 15l-5-5L5 21" /></svg>;
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="3" y="3" width="18" height="18" rx="2" />
+      <circle cx="8.5" cy="8.5" r="1.5" />
+      <path d="M21 15l-5-5L5 21" />
+    </svg>
+  );
 }
 function LectureIcon() {
-  return <svg viewBox="0 0 24 24"><rect x="3" y="4" width="13" height="9" rx="1" /><path d="M7 20l3-3M20 8v6M22 11h-4" /></svg>;
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      {/* Head */}
+      <circle cx="5.8" cy="5.2" r="2.1" />
+
+      {/* Body */}
+      <path d="M3.8 8.2a1 1 0 0 1 1-1h2.6a1 1 0 0 1 1 1V18H3.8V8.2z"/>
+
+      {/* Legs */}
+      <rect x="4.1" y="18" width="1.3" height="3" rx=".3"/>
+      <rect x="6.8" y="18" width="1.3" height="3" rx=".3"/>
+
+      {/* Arm pointing */}
+      <rect x="7.2" y="9.3" width="4.5" height="1.4" rx=".7"/>
+
+      {/* Presentation board */}
+      <path d="M11.5 4h7A1.5 1.5 0 0 1 20 5.5v9A1.5 1.5 0 0 1 18.5 16h-7v-2h6V6h-6V4z"/>
+    </svg>
+  );
 }
 function ChatIcon() {
-  return <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z" /></svg>;
+  return (
+    <svg viewBox="0 0 24 24">
+      <path d="M2 5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H8l-4.5 4.2V15H4a2 2 0 0 1-2-2V5z" fill="currentColor" />
+      <path d="M11 11a1.6 1.6 0 0 1 1.6-1.6h7A1.6 1.6 0 0 1 21 11v5.6a1.6 1.6 0 0 1-1.6 1.6h-5.7l-3 2.8v-2.8h-.1A1.6 1.6 0 0 1 9 16.6V11z" fill="currentColor" stroke="#f3f1fd" strokeWidth="1.6" />
+    </svg>
+  );
 }
+function InsightIcon() {
+  return (
+    <svg viewBox="0 0 24 24">
+      <rect x="2" y="20" width="17" height="0.5" rx="1" fill="currentColor" />
+      <rect x="3" y="16" width="1.6" height="2" rx="0.8" fill="currentColor" />
+      <rect x="7.6" y="13" width="1.6" height="5" rx="0.8" fill="currentColor" />
+      <rect x="12.2" y="10" width="1.6" height="10" rx="0.8" fill="currentColor" />
+      <rect x="16.8" y="6" width="1.6" height="14" rx="0.8" fill="currentColor" />
+      <path d="M3.8 12 L17.3 3.2 L17.7 4.7 L4.0 13.5 Z" fill="currentColor" />
+      <path d="M15.0 3.0 L19.5 1.6 L18.0 4.0 Z" fill="currentColor" />
+    </svg>
+  );
+}
+
 function RobotIcon() {
   return <svg viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="12" rx="3" /><circle cx="9" cy="14" r="1.2" /><circle cx="15" cy="14" r="1.2" /><path d="M12 8V4m0 0h-2m2 0h2" /></svg>;
 }
@@ -37,9 +82,6 @@ function SlidersIcon() {
 }
 function TargetIcon() {
   return <svg viewBox="0 0 24 24"><circle cx="11" cy="13" r="8" /><circle cx="11" cy="13" r="4.5" /><circle cx="11" cy="13" r="1" /><path d="M16 8l4-4m0 0h-3m3 0v3" /></svg>;
-}
-function BarChartIcon() {
-  return <svg viewBox="0 0 24 24"><path d="M5 20V10M12 20V4M19 20v-7" /></svg>;
 }
 function DocIcon() {
   return <svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z" /><path d="M14 2v6h6M8 13h8M8 17h8" /></svg>;
@@ -53,7 +95,7 @@ const stats = [
 const questionTypes = [
   ["Read Aloud", "Read the displayed text clearly and naturally to improve pronunciation and fluency.", WaveformIcon],
   ["Repeat Sentence", "Listen carefully and repeat the sentence exactly as you hear it to improve memory.", RepeatIcon],
-  ["Describe Image", "Analyze visual information and deliver a clear, structured response with confidence.", ImageIcon],
+  ["Describe Image", "Analyze visual information and deliver a clear, structured response with confidence and accuracy.", ImageIcon],
   ["Retell Lecture", "Listen to a lecture and summarize the main ideas in a well-organized spoken response.", LectureIcon],
   ["Answer Short Question", "Respond quickly and accurately to general knowledge and everyday questions.", ChatIcon],
 ] as const;
@@ -108,7 +150,7 @@ export default function PracticePage() {
       <section className="content-section question-section">
         <div className="section-heading">
           <h2>Practice by Question Type</h2>
-          <button className="outline-link"><BarChartIcon /> View Performance</button>
+          <button className="outline-link"><InsightIcon /> View Performance</button>
         </div>
         <div className="question-grid">
           {questionTypes.map(([title, description, Icon]) => (
