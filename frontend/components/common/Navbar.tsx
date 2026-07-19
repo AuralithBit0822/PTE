@@ -23,7 +23,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
           <Image src="/images/PTElogo.png" alt="PTE Prep" width={50} height={50} className="rounded-full bg-[rgba(74,45,219,0.2)]" />
-          <span className="text-[22px] font-[800] tracking-tight">
+          <span className="text-[20px] font-[800] tracking-tight">
             <span className="text-indigo-600">PTE.</span>
             <span className="text-indigo-600">Prep</span>
           </span>
@@ -35,7 +35,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className={`text-[20px] font-bold pb-0.5 transition-all duration-150 ${
+              className={`text-[18px] font-bold pb-0.5 transition-all duration-150 ${
                 pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href))
                   ? 'text-indigo-600 border-b-2 border-indigo-600'
                   : 'text-indigo-600 hover:text-indigo-700 border-b-2 border-transparent'
