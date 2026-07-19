@@ -117,7 +117,7 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-indigo-100 pt-6 mb-5">
+        <div className="pt-6 mb-5">
           <div className="grid grid-cols-2 gap-8">
             {/* Security Badge */}
             <div className="flex items-start gap-3">
@@ -175,7 +175,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright Bar */}
-        <div className="border-t border-indigo-100 pt-4 flex items-center justify-between">
+        <div className="w-full h-[53px] rounded-[10px] bg-[#3008F826] pt-[10px] pb-[10px] pl-[27px] pr-[27px] flex items-center justify-between mt-[10px]">
           <p className="text-xs text-gray-400">© 2026 PTE Prep. All right reserved.</p>
           <p className="text-xs text-gray-400">Made with passion for your success</p>
         </div>
