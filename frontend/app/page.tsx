@@ -369,7 +369,7 @@ function MockTestSection() {
             </div>
             <button
               id="mock-test-try-free"
-              className="bg-emerald-500 hover:bg-emerald-600 text-white px-[42px] py-[12px] rounded-[7px] text-[18px] font-semibold transition-colors self-start"
+              className="bg-white hover:bg-gray-100 text-[#3008F8] px-[42px] py-[12px] rounded-[7px] text-[18px] font-semibold transition-colors self-start border border-[#3008F8]"
             >
               Try for free mock test
             </button>
