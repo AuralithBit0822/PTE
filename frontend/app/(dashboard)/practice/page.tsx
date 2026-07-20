@@ -80,9 +80,6 @@ function ClockIcon() {
 function SlidersIcon() {
   return <svg viewBox="2 3 19 17"><path d="M4 6h10M17 6h3M4 12h4M11 12h9M4 18h13" /><circle cx="14" cy="6" r="2" /><circle cx="7" cy="12" r="2" /><circle cx="17" cy="18" r="2" /></svg>;
 }
-function TargetIcon() {
-  return <svg viewBox="0 0 24 24"><circle cx="11" cy="13" r="8" /><circle cx="11" cy="13" r="4.5" /><circle cx="11" cy="13" r="1" /><path d="M16 8l4-4m0 0h-3m3 0v3" /></svg>;
-}
 function DocIcon() {
   return <svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z" /><path d="M14 2v6h6M8 13h8M8 17h8" /></svg>;
 }
@@ -255,10 +252,12 @@ export default function PracticePage() {
       </section>
 
       <section className="daily-banner">
-        <span className="daily-icon"><TargetIcon /></span>
-        <div>
-          <h3>Daily Practice, Better Results</h3>
-          <p>Practice a little every day and see a big improvement in your speaking score.</p>
+        <div className="daily-banner-content">
+          <span className="daily-icon"><Image src="/images/dailybannericon.png" alt="Daily practice" width={64} height={64} /></span>
+          <div>
+            <h3>Daily Practice, Better Results</h3>
+            <p>Practice a little every day and see a big improvement in your speaking score.</p>
+          </div>
         </div>
         <Link href="/practice" className="practice-button">
           Start Daily Practice →
