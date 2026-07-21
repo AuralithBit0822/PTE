@@ -160,7 +160,7 @@ export default function MockTestPage() {
 
         {/* Section-wise Mock */}
         <div className="mb-16">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Section -wise Mock</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Section-wise Mock</h2>
           <div className="flex flex-col space-y-4">
             {[
               { title: 'Speaking', desc: 'Test your speaking skills with real exam questions.', q: 20, time: 50, color: 'bg-purple-100 text-purple-600', icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" /> },
@@ -168,10 +168,10 @@ export default function MockTestPage() {
               { title: 'Listening', desc: 'Test your speaking skills with real exam questions.', q: 20, time: 50, color: 'bg-indigo-100 text-indigo-600', icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" /> },
               { title: 'Reading', desc: 'Test your speaking skills with real exam questions.', q: 20, time: 50, color: 'bg-purple-100 text-purple-600', icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /> },
             ].map((section, idx) => (
-              <div key={idx} className="flex flex-col md:flex-row items-center justify-between bg-white border border-gray-200 rounded-xl p-4 md:p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div key={idx} className="flex flex-col md:flex-row items-center justify-between bg-[#F5F3FF] border-2 border-[#D9D9D9] rounded-xl py-3 md:py-5 px-4 md:px-6 shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-center w-full md:w-auto mb-4 md:mb-0">
-                  <div className={`w-12 h-12 rounded-lg ${section.color} flex items-center justify-center mr-4 shrink-0`}>
-                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <div className={`w-12 h-12 rounded-lg bg-[#3008F826] flex items-center justify-center mr-4 shrink-0`}>
+                    <svg className="w-6 h-6 text-[#3008F8]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       {section.icon}
                     </svg>
                   </div>
@@ -191,11 +191,11 @@ export default function MockTestPage() {
                     <div className="text-xs text-gray-500">Duration</div>
                   </div>
                   <div className="flex items-center space-x-4">
-                    <button className="text-[#3B28CC] border border-[#3B28CC] px-4 py-2 rounded-lg font-semibold text-sm flex items-center hover:bg-[#EEF2FF] transition-colors whitespace-nowrap">
+                    <button className="bg-white text-[#3008F8] border border-[#3008F8] px-4 py-2 rounded-lg font-semibold text-sm flex items-center hover:bg-gray-50 transition-colors whitespace-nowrap">
                       Start Free Practice
-                      <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                      <svg className="w-4 h-4 ml-2 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                     </button>
-                    <button className="text-gray-400 hover:text-gray-600">
+                    <button className="text-[#3008F8] hover:text-[#2506c4]">
                       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                     </button>
                   </div>
