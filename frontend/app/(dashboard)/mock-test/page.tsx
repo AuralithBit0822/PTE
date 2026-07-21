@@ -208,15 +208,15 @@ export default function MockTestPage() {
         {/* Recent Mock Test Attempts */}
         <div>
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Recent Mock Test Attempts</h2>
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto border-2 border-[#D9D9D9BF] rounded-xl">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="border-b border-gray-200">
-                  <th className="py-4 px-4 font-bold text-gray-900 w-1/3">Test Name</th>
-                  <th className="py-4 px-4 font-bold text-gray-900">Score</th>
-                  <th className="py-4 px-4 font-bold text-gray-900 w-1/4">Overall</th>
-                  <th className="py-4 px-4 font-bold text-gray-900">Date</th>
-                  <th className="py-4 px-4 font-bold text-gray-900 text-right">Review</th>
+                <tr className="border-b border-[#000000BF]">
+                  <th className="py-5 px-4 font-bold text-gray-900 w-1/3">Test Name</th>
+                  <th className="py-5 px-4 font-bold text-gray-900">Score</th>
+                  <th className="py-5 px-4 font-bold text-gray-900 w-1/4">Overall</th>
+                  <th className="py-5 px-4 font-bold text-gray-900">Date</th>
+                  <th className="py-5 px-4 font-bold text-gray-900 text-right">Review</th>
                 </tr>
               </thead>
               <tbody>
@@ -227,8 +227,8 @@ export default function MockTestPage() {
                   { name: 'Writing Mock Test', score: '95/100', progress: 95, date: '19 May 2026' },
                   { name: 'Full Length Mock Test 3', score: '75/100', progress: 80, date: '11 May 2026' },
                 ].map((attempt, idx) => (
-                  <tr key={idx} className="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-                    <td className="py-4 px-4">
+                  <tr key={idx} className="border-b border-[#000000BF] hover:bg-gray-50 transition-colors">
+                    <td className="py-5 px-4">
                       <div className="flex items-center">
                         <svg className="w-5 h-5 text-[#3B28CC] mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -237,7 +237,7 @@ export default function MockTestPage() {
                       </div>
                     </td>
                     <td className="py-4 px-4 text-gray-700 font-medium">{attempt.score}</td>
-                    <td className="py-4 px-4">
+                    <td className="py-5 px-4">
                       <div className="flex items-center space-x-3">
                         <div className="w-full h-1.5 bg-gray-200 rounded-full overflow-hidden">
                           <div className="h-full bg-[#3B28CC] rounded-full" style={{ width: `${attempt.progress}%` }}></div>
@@ -253,12 +253,6 @@ export default function MockTestPage() {
                 ))}
               </tbody>
             </table>
-          </div>
-          <div className="mt-6 flex justify-center">
-            <Link href="#" className="text-[#3B28CC] font-bold text-sm flex items-center hover:underline">
-              View All Attempts
-              <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-            </Link>
           </div>
         </div>
       </section>
