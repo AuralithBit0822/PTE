@@ -6,123 +6,114 @@ export default function MockTestPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Top Hero Section */}
-      <section className="bg-[#F5F3FF] pt-8 pb-16 px-4 md:px-8 lg:px-16">
-        <div className="max-w-7xl mx-auto">
-          {/* Breadcrumb */}
-          <div className="text-sm font-bold text-gray-900 mb-8 flex items-center space-x-2">
-            <Link href="/" className="hover:text-[#3B28CC]">Home</Link>
-            <svg className="w-3 h-3 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" /></svg>
-            <Link href="/practice" className="hover:text-[#3B28CC]">Practice</Link>
-            <svg className="w-3 h-3 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" /></svg>
-          </div>
-
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+      <section className="bg-[#F5F3FF]">
+        <div className="pl-[110px] pr-[10px] pt-[12px]">
+          <div className="flex items-center min-h-[486px]">
             {/* Left Content */}
-            <div className="flex-1 max-w-2xl">
-              <h1 className="text-[23px] md:text-[35px] font-extrabold text-gray-900 leading-[1.1] tracking-tight mb-4">
-                Master the Mock <span className="text-[#3B28CC]">Test Experience</span>
+            <div className="w-[50%] py-[101px] pr-6 flex-shrink-0">
+              <h1 className="text-[35px] font-extrabold text-gray-900 leading-[1.18] mb-5">
+                Master the Mock <span className="text-indigo-600">Test Experience</span>
                 <br />
-                <span className="text-[#3B28CC]">Get Ready</span> for the Real Exam.
+                <span className="text-indigo-600">Get Ready</span> for the Real Exam.
               </h1>
-              <p className="text-lg text-gray-600 mb-10 max-w-xl leading-relaxed">
+              <p className="text-gray-500 text-[17px] leading-relaxed mb-8 max-w-[460px] font-medium">
                 Experience full-length PTE mock tests with AI-powered scoring,
                 detailed analytics, and real exam conditions.
               </p>
 
               {/* Stats Row */}
-              <div className="flex flex-wrap gap-4">
+              <div className="w-[612px] h-[69px] flex items-center gap-[17px] rounded-[7px] border-[1.5px] border-gray-200 p-[7px] bg-white" style={{ boxShadow: '0px 4px 20px rgba(0,0,0,0.1)' }}>
                 {/* Stat 1 */}
-                <div className="bg-white rounded-2xl p-3.5 flex items-center shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white min-w-[150px] transition-transform hover:-translate-y-1">
-                  <div className="w-11 h-11 rounded-full bg-[#EEF2FF] flex items-center justify-center mr-3.5">
-                    <svg className="w-5 h-5 text-[#3B28CC]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="flex items-center gap-2 flex-1">
+                  <div className="w-9 h-9 rounded-full bg-[#EEF2FF] flex items-center justify-center flex-shrink-0">
+                    <svg className="w-4 h-4 text-[#3B28CC]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
                     </svg>
                   </div>
                   <div>
-                    <div className="font-extrabold text-gray-900 text-[17px]">12</div>
-                    <div className="text-[11px] font-medium text-gray-500 uppercase tracking-wide">Tests Attempted</div>
+                    <div className="font-extrabold text-gray-900 text-[15px] leading-tight">12</div>
+                    <div className="text-[9px] font-medium text-gray-500 uppercase tracking-wide leading-tight">Tests Attempted</div>
                   </div>
                 </div>
+
+                <div className="w-[1.5px] h-[35px] bg-gray-200 flex-shrink-0" />
+
                 {/* Stat 2 */}
-                <div className="bg-white rounded-2xl p-3.5 flex items-center shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white min-w-[150px] transition-transform hover:-translate-y-1">
-                  <div className="w-11 h-11 rounded-full bg-[#EEF2FF] flex items-center justify-center mr-3.5">
-                    <svg className="w-5 h-5 text-[#3B28CC]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="flex items-center gap-2 flex-1">
+                  <div className="w-9 h-9 rounded-full bg-[#EEF2FF] flex items-center justify-center flex-shrink-0">
+                    <svg className="w-4 h-4 text-[#3B28CC]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 21v-4M8 21h8M5 10a2 2 0 01-2-2V7a2 2 0 012-2h14a2 2 0 012 2v1a2 2 0 01-2 2M7 5v12a3 3 0 003 3h4a3 3 0 003-3V5M17 5H7" />
                     </svg>
                   </div>
                   <div>
-                    <div className="font-extrabold text-gray-900 text-[17px]">88%</div>
-                    <div className="text-[11px] font-medium text-gray-500 uppercase tracking-wide">Average Score</div>
+                    <div className="font-extrabold text-gray-900 text-[15px] leading-tight">88%</div>
+                    <div className="text-[9px] font-medium text-gray-500 uppercase tracking-wide leading-tight">Average Score</div>
                   </div>
                 </div>
+
+                <div className="w-[1.5px] h-[35px] bg-gray-200 flex-shrink-0" />
+
                 {/* Stat 3 */}
-                <div className="bg-white rounded-2xl p-3.5 flex items-center shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white min-w-[150px] transition-transform hover:-translate-y-1">
-                  <div className="w-11 h-11 rounded-full bg-[#EEF2FF] flex items-center justify-center mr-3.5">
-                    <svg className="w-5 h-5 text-[#3B28CC]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="flex items-center gap-2 flex-1">
+                  <div className="w-9 h-9 rounded-full bg-[#EEF2FF] flex items-center justify-center flex-shrink-0">
+                    <svg className="w-4 h-4 text-[#3B28CC]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <circle cx="12" cy="12" r="10" strokeWidth={2.5}/><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 6v6l4 2"/>
                     </svg>
                   </div>
                   <div>
-                    <div className="font-extrabold text-gray-900 text-[17px]">23 hours</div>
-                    <div className="text-[11px] font-medium text-gray-500 uppercase tracking-wide">Timed Practice</div>
+                    <div className="font-extrabold text-gray-900 text-[15px] leading-tight">23 hours</div>
+                    <div className="text-[9px] font-medium text-gray-500 uppercase tracking-wide leading-tight">Timed Practice</div>
                   </div>
                 </div>
+
+                <div className="w-[1.5px] h-[35px] bg-gray-200 flex-shrink-0" />
+
                 {/* Stat 4 */}
-                <div className="bg-white rounded-2xl p-3.5 flex items-center shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white min-w-[150px] transition-transform hover:-translate-y-1">
-                  <div className="w-11 h-11 rounded-full bg-[#EEF2FF] flex items-center justify-center mr-3.5">
-                    <svg className="w-5 h-5 text-[#3B28CC]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="flex items-center gap-2 flex-1">
+                  <div className="w-9 h-9 rounded-full bg-[#EEF2FF] flex items-center justify-center flex-shrink-0">
+                    <svg className="w-4 h-4 text-[#3B28CC]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                     </svg>
                   </div>
                   <div>
-                    <div className="font-extrabold text-gray-900 text-[17px]">85</div>
-                    <div className="text-[11px] font-medium text-gray-500 uppercase tracking-wide">Best Score</div>
+                    <div className="font-extrabold text-gray-900 text-[15px] leading-tight">85</div>
+                    <div className="text-[9px] font-medium text-gray-500 uppercase tracking-wide leading-tight">Best Score</div>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Right Content - Hero Image */}
-            <div className="relative flex-1 flex justify-center">
-              <div className="relative w-full max-w-md h-80 rounded-2xl overflow-hidden bg-[#e0e5f2]">
-                 <Image src="/images/girlPic.png" alt="Student with headphones" fill className="object-cover object-top" />
+            <div className="w-[590px] relative h-[321px] flex-shrink-0 overflow-visible ml-[50px]">
+              <div className="relative w-full h-full rounded-2xl overflow-hidden bg-[#e0e5f2] border border-gray-200">
+                 <Image src="/images/ChatGPT Image Jun 10, 2026, 12_20_03 PM 1.png" alt="Student with headphones" fill className="object-contain" />
               </div>
               
-              {/* Floating Cards (Approximation) */}
-              <div className="absolute top-4 left-0 bg-white/90 rounded-2xl shadow-[0_15px_40px_rgba(0,0,0,0.08)] p-3.5 flex items-center space-x-3 transform -translate-x-8 backdrop-blur-md border border-white/60">
-                <div className="w-10 h-10 rounded-xl bg-[#EEF2FF] flex items-center justify-center">
-                  <svg className="w-5 h-5 text-[#3B28CC]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+              {/* Floating Cards */}
+              <div className="absolute top-0 left-0 z-20 bg-white rounded-xl shadow-lg px-3 py-2.5 flex items-center gap-2.5 border border-gray-100 w-[162px]">
+                <div className="w-7 h-7 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-3.5 h-3.5 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
                 </div>
                 <div>
-                  <div className="text-[13px] font-bold text-gray-900">Full length Mock Test</div>
-                  <div className="text-[11px] font-medium text-gray-500">Timed.2h:15m</div>
+                  <div className="text-[11px] font-semibold text-gray-800 leading-tight">Full length Mock Test</div>
+                  <div className="text-[10px] text-gray-500 leading-tight">Timed. 2h:15m</div>
                 </div>
               </div>
 
-              <div className="absolute top-10 right-0 bg-white/90 rounded-2xl shadow-[0_15px_40px_rgba(0,0,0,0.08)] p-3.5 flex items-center space-x-3 transform translate-x-12 backdrop-blur-md border border-white/60">
-                <div className="w-9 h-9 rounded-full bg-[#3008F8] flex items-center justify-center shadow-md">
-                   <span className="text-white text-[11px] font-bold tracking-wider">PTE</span>
-                </div>
-                <div>
-                  <div className="text-[13px] font-bold text-gray-900">PTE Prep</div>
-                </div>
-              </div>
-              
-              <div className="absolute bottom-20 left-0 bg-white/90 rounded-2xl shadow-[0_15px_40px_rgba(0,0,0,0.08)] p-5 flex flex-col transform -translate-x-12 backdrop-blur-md border border-white/60">
-                 <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">Your Average Score</div>
-                 <div className="text-3xl font-extrabold text-gray-900">88</div>
-                 <div className="text-[11px] text-gray-600 font-semibold mt-1">
+              <div className="absolute bottom-0 left-0 z-20 bg-white rounded-xl shadow-lg px-3 py-2.5 flex flex-col border border-gray-100 w-[162px]">
+                 <div className="text-[10px] font-semibold text-gray-500 uppercase tracking-wide mb-0.5">Your Average Score</div>
+                 <div className="text-xl font-extrabold text-gray-900">88</div>
+                 <div className="text-[10px] text-gray-600 font-semibold">
                    <span className="text-red-500 font-bold">-8</span> This Week
                  </div>
               </div>
 
-              <div className="absolute top-32 right-0 bg-white/90 rounded-2xl shadow-[0_15px_40px_rgba(0,0,0,0.08)] p-5 flex flex-col transform translate-x-16 backdrop-blur-md border border-white/60">
-                 <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">Tests Attempted</div>
-                 <div className="flex items-center space-x-2">
-                   <span className="text-3xl font-extrabold text-gray-900">12</span>
-                   <span className="text-[11px] font-semibold text-gray-500">-Students</span>
+              <div className="absolute bottom-0 right-0 z-20 bg-white rounded-xl shadow-lg px-3 py-2.5 flex flex-col border border-gray-100 w-[162px]">
+                 <div className="text-[10px] font-semibold text-gray-500 uppercase tracking-wide mb-0.5">Tests Attempted</div>
+                 <div className="flex items-center gap-1.5">
+                   <span className="text-xl font-extrabold text-gray-900">12</span>
                  </div>
-                 <div className="text-[11px] text-gray-600 font-semibold mt-1">
+                 <div className="text-[10px] text-gray-600 font-semibold">
                    <span className="text-[#10B981] font-bold">-3</span> This week
                  </div>
               </div>
