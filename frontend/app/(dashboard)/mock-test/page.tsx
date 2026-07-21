@@ -127,18 +127,18 @@ export default function MockTestPage() {
         {/* Mock Test Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {[1, 2, 1, 1].map((item, idx) => (
-            <div key={idx} className="bg-white rounded-2xl border border-gray-200 p-6 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-16 h-16 rounded-full bg-[#EEF2FF] flex items-center justify-center mb-4">
-                <svg className="w-8 h-8 text-[#3B28CC]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div key={idx} className="bg-white rounded-2xl border-2 border-[#D9D9D9] p-6 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-[67px] h-[67px] rounded-full bg-[#CBC1FD] flex items-center justify-center mb-4">
+                <svg className="w-8 h-8 text-[#3008F8]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Full Length Mock Test {item}</h3>
+              <h3 className="text-[19px] font-bold text-gray-900 mb-2">Full Length Mock Test {item}</h3>
               <p className="text-sm text-gray-500 mb-6">Complete PTE Academic test with all sections.</p>
               
               <div className="flex w-full justify-between px-2 text-xs text-gray-600 mb-6 font-medium">
                 <div className="flex items-center">
-                  <svg className="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                  <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   2h:15m<br/>Duration
                 </div>
                 <div className="flex items-center text-right">
@@ -147,10 +147,10 @@ export default function MockTestPage() {
                 </div>
               </div>
 
-              <button className="w-full bg-[#3B28CC] hover:bg-blue-700 text-white font-semibold py-3 rounded-lg mb-4 transition-colors">
+              <button className="w-full bg-[#3008F8] hover:bg-[#2506c4] text-white font-semibold py-3 rounded-lg mb-4 transition-colors">
                 Start Test
               </button>
-              <Link href={`/mock-test/${item}`} className="text-[#3B28CC] font-semibold text-sm flex items-center hover:underline">
+              <Link href={`/mock-test/${item}`} className="text-[#3008F8] font-semibold text-sm flex items-center hover:underline">
                 View Detail
                 <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
               </Link>
