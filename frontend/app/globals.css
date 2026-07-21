@@ -72,7 +72,7 @@
 /* ── Hero: rebuilt sizing so it fits one viewport like the Figma design ── */
 .practice-hero {
   background: rgba(246, 244, 253, 1);
-  padding: 28px 2rem 32px;
+  padding: 28px 4rem 32px;
 }
 .practice-hero .hero-grid {
   width: 100%;
@@ -115,7 +115,7 @@
 .stat strong { font-size: 18px; line-height: 20px; }
 .stat small { color: #414141; font-size: 13px; line-height: 16px; }
 
-.content-section { max-width: 1320px; margin: 0 auto; padding: 2.5rem 6rem; }
+.content-section { max-width: 1320px; margin: 0 auto; padding: 2.5rem 4rem; }
 .outline-link, .text-link { color: var(--brand-blue); font-weight: 700; background: transparent; border: none; cursor: pointer; }
 
 /* ── Practice by Question Type: rebuilt to match Figma (compact cards, auto-width button) ── */
@@ -253,3 +253,129 @@
 
 /* Floating icons over hero image */
 .hero-image-wrap { position: relative; }
+
+/* ══════════════════════════════════════════════
+   Speaking Practice page (/practice/speaking)
+   ══════════════════════════════════════════════ */
+
+/* ── Hero ── */
+.speaking-hero { background: rgba(246, 244, 253, 1); padding: 28px 4rem 32px; }
+.speaking-hero-grid {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+.speaking-hero-copy { display: flex; flex-direction: column; justify-content: space-between; align-self: stretch; padding-top: 0; }
+.speaking-hero-copy h1 { margin: 20px 0 16px; font-size: 35px; font-weight: 800; line-height: 1.2; }
+.speaking-hero-copy p { margin: 0 0 28px; color: #46465a; font-size: 1.05rem; line-height: 1.7; font-weight: 500; max-width: 520px; }
+
+.speaking-stats { display: flex; gap: 12px; flex-wrap: wrap; }
+.speaking-stat {
+  display: flex; align-items: center; gap: 8px;
+  background: #e8e3ff; border-radius: 10px; padding: 10px 14px;
+  flex: 1 1 150px;
+}
+.speaking-stat-icon {
+  width: 28px; height: 28px; flex-shrink: 0; border-radius: 50%;
+  background: var(--brand-blue); display: grid; place-items: center;
+}
+.speaking-stat-icon svg { width: 14px; height: 14px; fill: none; stroke: #fff; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.speaking-stat div { display: flex; flex-direction: column; line-height: 1.25; }
+.speaking-stat strong { font-size: 0.9rem; font-weight: 800; }
+.speaking-stat span { font-size: 0.72rem; color: #4a4a5e; font-weight: 600; }
+
+.speaking-hero-visual { position: relative; display: flex; justify-content: center; }
+.speaking-hero-image { width: 95%; max-width: 500px; height: auto; object-fit: contain; border-radius: 18px; }
+.speaking-floating-chat {
+  position: absolute; top: 4%; left: 36%; z-index: 3;
+  color: var(--brand-blue);
+}
+.speaking-floating-chat svg { width: 48px; height: 48px; fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+
+.ai-feedback-card {
+  position: absolute; left: -4%; top: 42%; z-index: 3;
+  background: #fff; border-radius: 14px; box-shadow: 0 16px 32px rgba(33,25,138,0.14);
+  padding: 16px 20px; min-width: 190px;
+}
+.ai-feedback-card h4 { margin: 0 0 10px; font-size: 0.95rem; font-weight: 800; }
+.ai-feedback-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 4px 0; font-size: 0.9rem; color: #333; font-weight: 600; }
+.tag-good { background: #d9f7e3; color: #1a8a4a; font-size: 0.78rem; font-weight: 700; padding: 2px 10px; border-radius: 999px; }
+
+.audio-bar {
+  position: absolute; bottom: 2%; left: 58%; transform: translateX(-50%);
+  z-index: 3; display: flex; align-items: center; gap: 8px;
+  background: #fff; border-radius: 999px; box-shadow: 0 12px 28px rgba(33,25,138,0.14);
+  padding: 8px 14px; width: min(85%, 360px);
+}
+.audio-mic { width: 28px; height: 28px; flex-shrink: 0; border-radius: 50%; background: var(--brand-blue); display: grid; place-items: center; }
+.audio-mic svg { width: 14px; height: 14px; fill: none; stroke: #fff; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.audio-waveform { flex: 1; display: flex; align-items: center; gap: 2px; overflow: hidden; }
+.audio-waveform span { flex: 0 0 2px; background: var(--brand-blue); border-radius: 2px; opacity: 0.8; }
+.audio-time { font-size: 0.75rem; font-weight: 700; color: #333; flex-shrink: 0; }
+.audio-sound-icon { display: flex; align-items: center; flex-shrink: 0; }
+.audio-sound-icon img { width: 18px; height: 18px; object-fit: contain; }
+
+/* ── Speaking Question Types ── */
+.speaking-types-section { padding-top: 4rem; padding-bottom: 4rem;}
+.section-title-center { text-align: center; font-size: clamp(1.5rem, 2.2vw, 2rem); font-weight: 800; margin-bottom: 2.5rem; }
+.speaking-types-layout { display: grid; grid-template-columns: 1.2fr 300px; gap: 1.5rem; align-items: stretch; }
+.speaking-types-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(2, 1fr); gap: 1rem; }
+.speaking-type-card {
+  background: #fff; border: 1px solid #e6e6ee; border-radius: 14px;
+  padding: 1rem 1rem; display: flex; flex-direction: column; align-items: center;
+  gap: 0.4rem; text-align: center;
+}
+.speaking-type-icon { color: var(--brand-blue); }
+.speaking-type-icon svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.speaking-type-card h3 { margin: 0; font-size: 0.9rem; font-weight: 800; }
+.speaking-type-card p { margin: 0; font-size: 0.78rem; color: #55556b; line-height: 1.4; }
+.speaking-type-meta { font-size: 0.78rem; color: #333; font-weight: 600; margin-top: 0.15rem; }
+.outline-pill-button {
+  display: inline-flex; align-items: center; gap: 6px;
+  border: 1px solid var(--brand-blue); color: var(--brand-blue);
+  border-radius: 8px; padding: 0.35rem 0.75rem; font-weight: 700; font-size: 0.8rem;
+  text-decoration: none; margin-top: 0.25rem;
+}
+
+.speaking-overview-card {
+  background: #fff; border: 1px solid #e6e6ee; border-radius: 14px;
+  padding: 1.5rem; display: flex; flex-direction: column; align-items: center;
+  box-shadow: 0 20px 40px rgba(33,25,138,0.06);
+}
+.speaking-overview-card h3 { margin: 0 0 1.25rem; font-size: 1.05rem; font-weight: 800; align-self: flex-start; }
+.overview-donut {
+  width: 150px; aspect-ratio: 1; border-radius: 50%;
+  display: grid; place-items: center; position: relative; margin-bottom: 1.5rem;
+}
+.overview-donut::before { content: ""; position: absolute; inset: 14px; background: #fff; border-radius: 50%; }
+.overview-donut div { position: relative; z-index: 1; text-align: center; }
+.overview-donut b { display: block; font-size: 1.6rem; font-weight: 800; }
+.overview-donut small { color: #6f6f92; font-size: 0.85rem; }
+.overview-bars { width: 100%; display: flex; flex-direction: column; gap: 1.45rem; margin-bottom: 1.5rem; }
+.overview-bar-label { display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.3rem; }
+.overview-bar-track { width: 100%; height: 5px; background: #ece9f7; border-radius: 999px; overflow: hidden; }
+.overview-bar-fill { height: 100%; background: var(--brand-blue); border-radius: 999px; }
+.overview-cta { width: 100%; margin-top: auto; padding: 0.55rem 1rem; font-size: 0.85rem; }
+
+/* ── AI feedback CTA banner ── */
+.ai-cta-banner {
+  background: #fff; border: 1px solid #d5d5e0; border-radius: 14px;
+  box-shadow: 1px 1px 12px 0px rgba(0, 0, 0, 0.25);
+  padding: 1.6rem 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
+}
+.ai-cta-copy h3 { margin: 0 0 0.3rem; font-size: 1rem; font-weight: 800; }
+.ai-cta-copy p { margin: 0 0 0.6rem; color: #4f4f6c; font-size: 0.85rem; }
+.ai-cta-copy .practice-button { padding: 0.4rem 0.8rem; font-size: 0.75rem; }
+@media (max-width: 1100px) {
+  .speaking-hero-grid { grid-template-columns: 1fr; }
+  .speaking-hero-visual { margin-top: 32px; }
+  .speaking-types-layout { grid-template-columns: 1fr; }
+  .speaking-types-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .speaking-types-grid { grid-template-columns: 1fr; }
+  .ai-cta-banner { flex-direction: column; align-items: flex-start; }
+}
