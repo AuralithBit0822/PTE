@@ -274,18 +274,18 @@
 
 .speaking-stats { display: flex; gap: 12px; flex-wrap: wrap; }
 .speaking-stat {
-  display: flex; align-items: center; gap: 8px;
-  background: #e8e3ff; border-radius: 10px; padding: 10px 14px;
+  display: flex; align-items: center; gap: 9px;
+  background: #e8e3ff; border-radius: 10px; padding: 11px 11px;
   flex: 1 1 150px;
 }
 .speaking-stat-icon {
   width: 28px; height: 28px; flex-shrink: 0; border-radius: 50%;
   background: var(--brand-blue); display: grid; place-items: center;
 }
-.speaking-stat-icon svg { width: 14px; height: 14px; fill: none; stroke: #fff; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.speaking-stat-icon svg { width: 15px; height: 15px; fill: none; stroke: #fff; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
 .speaking-stat div { display: flex; flex-direction: column; line-height: 1.25; }
-.speaking-stat strong { font-size: 0.9rem; font-weight: 800; }
-.speaking-stat span { font-size: 0.72rem; color: #4a4a5e; font-weight: 600; }
+.speaking-stat strong { font-size: 0.92rem; font-weight: 800; }
+.speaking-stat span { font-size: 0.74rem; color: #4a4a5e; font-weight: 600; }
 
 .speaking-hero-visual { position: relative; display: flex; justify-content: center; }
 .speaking-hero-image { width: 95%; max-width: 500px; height: auto; object-fit: contain; border-radius: 18px; }
@@ -378,4 +378,86 @@
 @media (max-width: 640px) {
   .speaking-types-grid { grid-template-columns: 1fr; }
   .ai-cta-banner { flex-direction: column; align-items: flex-start; }
+}
+
+/* ══════════════════════════════════════════════
+   Writing Practice page (/practice/writing)
+   ══════════════════════════════════════════════ */
+
+/* ── Hero (reuses .speaking-hero / .speaking-hero-grid layout, only overrides where needed) ── */
+.writing-breadcrumbs { flex-wrap: wrap; row-gap: 6px; font-size: 1rem; }
+.writing-breadcrumbs a { color: inherit; }
+.writing-breadcrumbs .current-crumb { color: var(--brand-blue); font-weight: 800; }
+
+.writing-hero-visual { display: flex; }
+.writing-feedback-card { min-width: 210px; padding: 18px 24px; top: 37%; left: -2%; }
+.writing-feedback-card h4 { padding-bottom: 6px; margin-bottom: 6px; border-bottom: 1px solid #eee; font-size: 0.9rem; }
+.writing-feedback-card .ai-feedback-row { font-size: 0.82rem; padding: 3px 0; gap: 10px; }
+
+/* ── Writing task cards (Summarize Written Text / Essay) ── */
+.writing-tasks-section { padding-top: 5rem; padding-bottom: 0; }
+.writing-tasks-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
+.writing-task-card {
+  position: relative; background: #fff; border: 2px solid #d9d6d6; border-radius: 14px;
+  padding: 1.5rem 2.25rem 2rem; display: flex; flex-direction: column; gap: 1.25rem; overflow: hidden;
+}
+.writing-task-heading { display: flex; align-items: flex-start; gap: 12px; }
+.writing-task-icon {
+  width: 24px; height: 24px; border-radius: 6px; background: var(--brand-blue);
+  color: #fff; display: grid; place-items: center; flex-shrink: 0;
+}
+.writing-task-icon svg { width: 12px; height: 12px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.writing-task-card h3 { margin: 0 0 12px 0; font-size: 1.4rem; font-weight: 800; }
+.writing-task-card > .writing-task-copy > p { margin: 0 0 10px 8px; color: #000; line-height: 1.5; max-width: 60%; font-size: 1rem; font-weight: 600; }
+.writing-task-bullets { list-style: none; display: flex; flex-direction: column; gap: 6px; margin-left: 8px; }
+.writing-task-bullets li { display: flex; align-items: center; gap: 8px; font-weight: 500; color: #222; font-size: 0.95rem; }
+.writing-check-icon { width: 20px; height: 20px; flex-shrink: 0; color: var(--brand-blue); }
+.writing-check-icon svg { width: 20px; height: 20px; }
+.writing-task-illustration { position: absolute; top: 4.5rem; right: 1.5rem; opacity: 0.95; }
+.writing-text-illustration { border: 1px solid rgba(217, 217, 217, 1); }
+.writing-task-footer { display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 0.5rem; }
+.writing-time { display: flex; align-items: center; gap: 8px; color: var(--brand-blue); font-weight: 700; font-size: 1rem; }
+.writing-time svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.writing-task-footer .practice-button { padding: 0.55rem 1.2rem; font-size: 0.9rem; }
+
+/* ── Improve Your Writing Skills banner ── */
+.writing-skills-banner {
+  background: #f6f4fe; border: 2px solid #d9d6d6; border-radius: 14px; padding: 2.5rem 2rem 3rem; margin-bottom: 3rem;
+}
+.writing-skills-banner .section-title-center { margin-bottom: 2rem; }
+.writing-skills-grid { display: grid; grid-template-columns: repeat(5, 1fr); }
+.writing-skill-item {
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  padding: 0 1.25rem; border-left: 1px solid #c4bfe0;
+}
+.writing-skill-item:first-child { border-left: none; }
+.writing-skill-icon {
+  margin-bottom: 0.9rem;
+}
+.writing-skill-icon img { width: 55px; height: 55px; border-radius: 50%; object-fit: cover; }
+.writing-skill-item h3 { margin: 0 0 0.5rem; font-size: 0.9rem; font-weight: 800; }
+.writing-skill-item p { margin: 0; font-size: 0.9rem; color: #55556b; line-height: 1.45; }
+
+/* ── Get AI Feedback CTA banner ── */
+.writing-cta-banner {
+  background: #f6f4fe; border: 2px solid #d9d6d6; border-radius: 14px; padding: 3rem 3.5rem;
+  display: flex; align-items: center; gap: 2.5rem; margin: 0 0 3rem;
+}
+.writing-cta-robot-wrap { position: relative; flex-shrink: 0; }
+.writing-cta-copy { flex: 1; min-width: 200px; }
+.writing-cta-copy h3 { margin: 0 0 0.5rem; font-size: 1.4rem; font-weight: 800; }
+.writing-cta-copy p { margin: 0; color: #46465a; font-size: 1rem; }
+.writing-cta-button { flex-shrink: 0; padding: 0.65rem 1.4rem; font-size: 1rem; }
+.writing-cta-illustration { flex-shrink: 0; }
+
+@media (max-width: 1100px) {
+  .writing-tasks-grid { grid-template-columns: 1fr; }
+  .writing-skills-grid { grid-template-columns: repeat(2, 1fr); row-gap: 2rem; }
+  .writing-skill-item { border-left: none; }
+  .writing-cta-banner { flex-wrap: wrap; }
+}
+@media (max-width: 640px) {
+  .writing-skills-grid { grid-template-columns: 1fr; }
+  .writing-task-illustration { display: none; }
+  .writing-task-card > .writing-task-copy > p { max-width: 100%; }
 }
