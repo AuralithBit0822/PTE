@@ -112,10 +112,10 @@ const recentPractice = [
 ] as const;
 
 const performanceMetrics = [
-  { label: "Pronunciation", score: "87/100", color: "#2e10f2" },
-  { label: "Fluency", score: "87/100", color: "#16a34a" },
-  { label: "Content", score: "87/100", color: "#f97316" },
-  { label: "Grammar", score: "87/100", color: "#22d3ee" },
+  { label: "Pronunciation", score: "87/100", color: "#2e10f2", value: 87 },
+  { label: "Fluency", score: "87/100", color: "#16a34a", value: 87 },
+  { label: "Content", score: "87/100", color: "#f97316", value: 87 },
+  { label: "Grammar", score: "87/100", color: "#22d3ee", value: 87 },
 ];
 
 export default function PracticePage() {
@@ -229,14 +229,19 @@ export default function PracticePage() {
                 <small>Performance</small>
               </div>
             </div>
-            <div className="metrics">
-              {performanceMetrics.map(({ label, score, color }) => (
-                <div className="metric" key={label}>
-                  <span className="metric-label">
-                    <i className="dot" style={{ background: color }} />
-                    {label}
-                  </span>
-                  <b>{score}</b>
+            <div className="performance-bars">
+              {performanceMetrics.map(({ label, score, color, value }) => (
+                <div className="performance-bar-row" key={label}>
+                  <div className="performance-bar-label">
+                    <span className="metric-label">
+                      <i className="dot" style={{ background: color }} />
+                      {label}
+                    </span>
+                    <b>{score}</b>
+                  </div>
+                  <div className="performance-bar-track">
+                    <div className="performance-bar-fill" style={{ width: `${value}%`, background: color }} />
+                  </div>
                 </div>
               ))}
             </div>
