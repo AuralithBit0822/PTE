@@ -327,6 +327,7 @@
   background: #fff; border: 1px solid #e6e6ee; border-radius: 14px;
   padding: 1rem 1rem; display: flex; flex-direction: column; align-items: center;
   gap: 0.4rem; text-align: center;
+  box-shadow: 0 20px 40px rgba(33,25,138,0.06);
 }
 .speaking-type-icon { color: var(--brand-blue); }
 .speaking-type-icon svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }

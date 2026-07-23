@@ -111,14 +111,14 @@ const aiFeedbackRows = [
 ];
 
 const speakingTypes = [
-  ["Read Aloud", "Read the displayed text clearly and naturally to improve pronunciation and fluency.", WaveformIcon],
-  ["Repeat Sentence", "Listen carefully and repeat the sentence exactly as you hear it to improve memory.", RepeatIcon],
-  ["Describe Image", "Analyze visual information and deliver a clear, structured response with confidence and accuracy.", ImageTypeIcon],
-  ["Retell Lecture", "Listen to a lecture and summarize the main ideas in a well-organized spoken response.", LectureIcon],
-  ["Answer Short Question", "Respond quickly and accurately to general knowledge and everyday questions with answers.", ChatIcon],
-  ["Summarize Spoken Test", "Listen to an audio recording and write a concise summary of the key information.", HeadphonesIcon],
-  ["Response to a Situation", "Read a real-life scenario and provide an appropriate, effective spoken response.", PeopleIcon],
-  ["Read Aloud", "Read the displayed text clearly and naturally to improve pronunciation and fluency.", WaveformIcon],
+  ["Read Aloud", "Read the displayed text clearly and naturally to improve pronunciation and fluency.", WaveformIcon, "read-aloud"],
+  ["Repeat Sentence", "Listen carefully and repeat the sentence exactly as you hear it to improve memory.", RepeatIcon, "repeat-sentence"],
+  ["Describe Image", "Analyze visual information and deliver a clear, structured response with confidence and accuracy.", ImageTypeIcon, "describe-image"],
+  ["Retell Lecture", "Listen to a lecture and summarize the main ideas in a well-organized spoken response.", LectureIcon, "retell-lecture"],
+  ["Answer Short Question", "Respond quickly and accurately to general knowledge and everyday questions with answers.", ChatIcon, "answer-short-question"],
+  ["Summarize Spoken Test", "Listen to an audio recording and write a concise summary of the key information.", HeadphonesIcon, "summarize-spoken-test"],
+  ["Response to a Situation", "Read a real-life scenario and provide an appropriate, effective spoken response.", PeopleIcon, "response-to-a-situation"],
+  ["Read Aloud", "Read the displayed text clearly and naturally to improve pronunciation and fluency.", WaveformIcon, "read-aloud"],
 ] as const;
 
 const overviewBars = [
@@ -196,13 +196,13 @@ export default function SpeakingPracticePage() {
         <h2 className="section-title-center">Speaking Question Types</h2>
         <div className="speaking-types-layout">
           <div className="speaking-types-grid">
-            {speakingTypes.map(([title, description, Icon], i) => (
+            {speakingTypes.map(([title, description, Icon, slug], i) => (
               <article className="speaking-type-card" key={`${title}-${i}`}>
                 <span className="speaking-type-icon"><Icon /></span>
                 <h3>{title}</h3>
                 <p>{description}</p>
                 <span className="speaking-type-meta">15+ Solutions</span>
-                <Link className="outline-pill-button" href="/practice/speaking">
+                <Link className="outline-pill-button" href={`/practice/speaking/${slug}`}>
                   Practice <span aria-hidden="true">→</span>
                 </Link>
               </article>

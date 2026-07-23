@@ -90,11 +90,11 @@ const stats = [
 ];
 
 const questionTypes = [
-  ["Read Aloud", "Read the displayed text clearly and naturally to improve pronunciation and fluency.", WaveformIcon],
-  ["Repeat Sentence", "Listen carefully and repeat the sentence exactly as you hear it to improve memory.", RepeatIcon],
-  ["Describe Image", "Analyze visual information and deliver a clear, structured response with confidence and accuracy.", ImageIcon],
-  ["Retell Lecture", "Listen to a lecture and summarize the main ideas in a well-organized spoken response.", LectureIcon],
-  ["Answer Short Question", "Respond quickly and accurately to general knowledge and everyday questions.", ChatIcon],
+  ["Read Aloud", "Read the displayed text clearly and naturally to improve pronunciation and fluency.", WaveformIcon, "read-aloud"],
+  ["Repeat Sentence", "Listen carefully and repeat the sentence exactly as you hear it to improve memory.", RepeatIcon, "repeat-sentence"],
+  ["Describe Image", "Analyze visual information and deliver a clear, structured response with confidence and accuracy.", ImageIcon, "describe-image"],
+  ["Retell Lecture", "Listen to a lecture and summarize the main ideas in a well-organized spoken response.", LectureIcon, "retell-lecture"],
+  ["Answer Short Question", "Respond quickly and accurately to general knowledge and everyday questions.", ChatIcon, "answer-short-question"],
 ] as const;
 
 const practiceModes = [
@@ -150,12 +150,12 @@ export default function PracticePage() {
           <button className="outline-link"><InsightIcon /> View Performance</button>
         </div>
         <div className="question-grid">
-          {questionTypes.map(([title, description, Icon]) => (
+            {questionTypes.map(([title, description, Icon, slug]) => (
             <article className="question-card" key={title}>
               <span className="card-icon"><Icon /></span>
               <h3>{title}</h3>
               <p>{description}</p>
-              <Link className="practice-button" href="/practice/speaking">
+              <Link className="practice-button" href={`/practice/speaking/${slug}`}>
                 Practice Now
               </Link>
               <small className="card-meta"><DocIcon /> 10 Questions</small>
