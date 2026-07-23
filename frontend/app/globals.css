@@ -321,7 +321,7 @@
 /* ── Speaking Question Types ── */
 .speaking-types-section { padding-top: 4rem; padding-bottom: 4rem;}
 .section-title-center { text-align: center; font-size: clamp(1.5rem, 2.2vw, 2rem); font-weight: 800; margin-bottom: 2.5rem; }
-.speaking-types-layout { display: grid; grid-template-columns: 1.2fr 300px; gap: 1.5rem; align-items: stretch; }
+.speaking-types-layout { display: grid; grid-template-columns: 1.2fr 260px; gap: 1.5rem; align-items: stretch; }
 .speaking-types-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(2, 1fr); gap: 1rem; }
 .speaking-type-card {
   background: #fff; border: 1px solid #e6e6ee; border-radius: 14px;
