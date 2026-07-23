@@ -418,6 +418,131 @@
 }
 
 /* ══════════════════════════════════════════════
+   Speaking Task Page (/practice/speaking/[taskId])
+   ══════════════════════════════════════════════ */
+
+.task-page { min-height: 100vh; background: #fff; }
+
+/* ── Top bar ── */
+.task-topbar {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; padding: 1rem 2rem; border-bottom: 1px solid #ececf5; flex-wrap: wrap;
+}
+.task-topbar-left { display: flex; align-items: center; flex-wrap: wrap; gap: 4px; }
+.task-tab {
+  display: inline-flex; align-items: center; gap: 4px;
+  color: var(--brand-blue); font-weight: 700; text-decoration: none; font-size: 0.95rem;
+  white-space: nowrap;
+}
+.task-tab svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.task-tab-group { display: inline-flex; align-items: center; gap: 4px; }
+.task-tab-sep { color: #333; font-weight: 600; margin: 0 2px; }
+.task-tab.active { text-decoration: underline; }
+.task-exit-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  border: 1px solid #ddd8fb; border-radius: 8px; padding: 0.5rem 0.9rem;
+  color: var(--brand-blue); font-weight: 700; font-size: 0.9rem; text-decoration: none;
+  flex-shrink: 0;
+}
+.task-exit-btn svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+
+/* ── 3-column layout ── */
+.task-layout {
+  max-width: 1400px; margin: 0 auto; padding: 1.5rem 2rem 3rem;
+  display: grid; grid-template-columns: 240px 1fr 240px; gap: 1.5rem; align-items: start;
+}
+
+/* ── Left sidebar ── */
+.task-sidebar { border: 1px solid #ebecff; border-radius: 14px; padding: 1.5rem 1.25rem; }
+.task-sidebar-title { margin: 0 0 1.25rem; font-size: 1.1rem; font-weight: 800; text-align: center; }
+.task-type-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem; }
+.task-type-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 0.7rem 0.75rem; border-radius: 10px; text-decoration: none; color: #1a1a2e;
+}
+.task-type-item.active { background: #ece7ff; font-weight: 700; }
+.task-type-icon {
+  width: 34px; height: 34px; border-radius: 50%; flex-shrink: 0;
+  background: rgba(48, 8, 248, 0.1); color: var(--brand-blue);
+  display: grid; place-items: center;
+}
+.task-type-icon svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.task-type-label { flex: 1; font-size: 0.95rem; }
+.task-type-count { font-size: 0.85rem; color: #6c6c8d; font-weight: 600; }
+.task-progress-card { border: 1px solid #ebecff; border-radius: 12px; padding: 1rem; }
+.task-progress-card h3 { margin: 0 0 0.75rem; font-size: 0.95rem; font-weight: 800; }
+.task-progress-track { width: 100%; height: 6px; background: #ece9f7; border-radius: 999px; overflow: hidden; margin-bottom: 0.6rem; }
+.task-progress-fill { height: 100%; background: var(--brand-blue); border-radius: 999px; }
+.task-progress-label { font-size: 0.85rem; font-weight: 700; color: var(--brand-blue); }
+
+/* ── Main panel ── */
+.task-main { border: 1px solid #ebecff; border-radius: 14px; padding: 1.75rem; }
+.task-main-header { display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem; }
+.task-main-header-icon { color: var(--brand-blue); display: flex; }
+.task-main-header-icon svg { width: 26px; height: 26px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.task-main-header h1 { margin: 0; font-size: 1.4rem; font-weight: 800; }
+.task-main-sub { margin: 0 0 1.5rem; color: #46465a; }
+.task-block-label { margin: 0 0 0.6rem; font-size: 1rem; font-weight: 800; }
+.task-text-box {
+  background: #f4f2fd; border-radius: 12px; padding: 1.25rem;
+  line-height: 1.7; color: #1a1a2e; margin-bottom: 1.5rem;
+}
+.task-recording-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem; }
+.task-status-pill {
+  background: #fde3e3; color: #c0392b; font-weight: 700; font-size: 0.85rem;
+  padding: 0.35rem 0.9rem; border-radius: 999px;
+}
+.task-status-pill.recorded { background: #d9f7e3; color: #1a8a4a; }
+.task-recording-box {
+  background: #f4f2fd; border-radius: 14px; padding: 2rem 1.5rem;
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  gap: 0.4rem; margin-bottom: 1.5rem;
+}
+.task-mic-button {
+  width: 64px; height: 64px; border-radius: 50%; border: none; cursor: pointer;
+  background: #e3ddff; color: var(--brand-blue); display: grid; place-items: center;
+  margin-bottom: 0.75rem;
+}
+.task-mic-button svg { width: 28px; height: 28px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.task-mic-button.recording { background: var(--brand-blue); color: #fff; }
+.task-recording-title { margin: 0; font-weight: 800; font-size: 1.05rem; }
+.task-recording-sub { margin: 0 0 0.5rem; color: #55556b; font-size: 0.9rem; }
+.task-timer { display: flex; align-items: center; gap: 8px; color: #46465a; font-weight: 600; font-size: 0.9rem; }
+.task-timer svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+.task-footer-nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.task-nav-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  border: 1px solid #ddd8fb; border-radius: 8px; padding: 0.6rem 1rem;
+  background: #fff; color: var(--brand-blue); font-weight: 700; font-size: 0.9rem; cursor: pointer;
+}
+.task-nav-btn svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.task-nav-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.task-nav-btn-next { border: none; }
+.task-question-count { font-weight: 600; color: #333; font-size: 0.95rem; }
+
+/* ── Right column: Instructions / Tips ── */
+.task-side-right { display: flex; flex-direction: column; gap: 1.5rem; }
+.task-info-card { border: 1px solid #ebecff; border-radius: 14px; padding: 1.25rem 1.5rem; }
+.task-info-title { display: flex; align-items: center; gap: 8px; margin: 0 0 1rem; font-size: 1.05rem; font-weight: 800; }
+.task-info-title svg { width: 18px; height: 18px; fill: none; stroke: var(--brand-blue); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.task-bullet-list { list-style: none; display: flex; flex-direction: column; gap: 0.9rem; }
+.task-bullet-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.95rem; color: #1a1a2e; line-height: 1.4; }
+.task-bullet-icon { color: var(--brand-blue); flex-shrink: 0; margin-top: 2px; }
+.task-bullet-icon svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+.task-coming-soon { max-width: 600px; margin: 4rem auto; text-align: center; }
+.task-coming-soon h1 { font-size: 1.6rem; font-weight: 800; margin-bottom: 0.5rem; }
+.task-coming-soon p { color: #55556b; }
+
+@media (max-width: 1200px) {
+  .task-layout { grid-template-columns: 220px 1fr 220px; }
+}
+@media (max-width: 992px) {
+  .task-layout { grid-template-columns: 1fr; }
+}
+
+/* ══════════════════════════════════════════════
    Writing Practice page (/practice/writing)
    ══════════════════════════════════════════════ */
 
