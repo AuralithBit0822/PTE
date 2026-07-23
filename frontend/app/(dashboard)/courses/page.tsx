@@ -75,121 +75,124 @@ export default function CoursesPage() {
       </section>
 
       {/* 2. Choose Your Learning Path */}
-      <section className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 py-20">
-        <h2 className="text-3xl font-extrabold text-gray-900 mb-12">Choose Your Learning Path</h2>
+      <section className="pl-[110px] pr-[110px] py-20">
+        <h2 className="text-[2rem] font-extrabold text-gray-900 mb-12">Choose Your Learning Path</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="flex justify-between gap-[33px]">
           {/* Beginner Card */}
-          <div className="bg-white rounded-3xl border border-gray-200 p-8 flex flex-col shadow-sm hover:shadow-xl transition-shadow relative overflow-hidden">
-            <div className="bg-[#E6F4EA] text-[#137333] text-xs font-bold px-3 py-1 rounded-full w-fit mb-6 tracking-wide uppercase">Beginner</div>
-            <div className="flex items-center mb-6">
+          <div className="bg-[#F6F6F680] rounded-[10px] border-2 border-[#D9D9D9] pt-[10px] pr-[25px] pb-[10px] pl-[25px] flex flex-col shadow-sm hover:shadow-xl transition-shadow relative overflow-hidden flex-1 min-h-[380px]">
+            <div className="bg-[#E6F4EA] text-[#137333] text-xs font-bold px-3 py-1 rounded-full w-fit mb-5 tracking-wide uppercase">Beginner</div>
+            <div className="flex items-center mb-5">
                <div className="w-12 h-12 rounded-xl bg-[#E6F4EA] flex items-center justify-center mr-4">
                  <span className="text-[#137333] font-bold text-xl">🌱</span>
                </div>
                <div>
-                 <h3 className="text-xl font-bold text-gray-900">PTE Foundation</h3>
-                 <p className="text-sm font-medium text-gray-500">Target Score: 30-50</p>
+                  <h3 className="text-[19px] font-bold text-black">PTE Foundation</h3>
+                 <p className="text-xs font-medium text-gray-500">Target Score: 30-50</p>
                </div>
             </div>
-            <ul className="space-y-3 mb-8 flex-1">
+            <ul className="space-y-2.5 mb-5 flex-1">
               {['Grammar Basics', 'Vocabulary Building', 'Speaking Fundamentals', 'Reading Basics', 'Listening Essentials', 'Weekly Practice Tests'].map((feature, i) => (
                 <li key={i} className="flex items-start">
-                  <svg className="w-5 h-5 text-[#137333] mr-3 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-                  <span className="text-sm font-medium text-gray-700">{feature}</span>
+                  <svg className="w-4 h-4 text-[#137333] mr-2.5 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+                  <span className="text-[15px] font-medium text-black">{feature}</span>
                 </li>
               ))}
             </ul>
-            <div className="flex items-center justify-between border-t border-gray-100 pt-6 mb-6">
-               <div className="flex items-center text-sm font-bold text-gray-900">
-                  <svg className="w-5 h-5 text-[#137333] mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="10" strokeWidth={2}/><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6l4 2"/></svg>
-                  <div>Duration<br/><span className="font-extrabold text-[#137333]">4 Weeks</span></div>
+            <div className="flex items-center justify-center gap-5 border-2 border-[#D9D9D9] rounded-lg px-5 py-3 mb-4">
+               <div className="flex items-center text-xs font-bold text-black">
+                  <svg className="w-[19px] h-[19px] text-[#137333] mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="10" strokeWidth={2}/><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6l4 2"/></svg>
+                  <div className="leading-tight">Duration<br/><span className="font-extrabold text-[#137333]">4 Weeks</span></div>
                </div>
-               <div className="flex items-center text-sm font-bold text-gray-900">
-                  <svg className="w-5 h-5 text-[#137333] mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
-                  <div>Lessons<br/><span className="font-extrabold text-[#137333]">40+</span></div>
+               <div className="w-[1.5px] h-[30px] bg-[#D9D9D9] flex-shrink-0" />
+               <div className="flex items-center text-xs font-bold text-black">
+                  <svg className="w-[19px] h-[19px] text-[#137333] mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                  <div className="leading-tight">Lessons<br/><span className="font-extrabold text-[#137333]">40+</span></div>
                </div>
             </div>
             <div className="flex items-center justify-between">
-               <div className="text-xl font-extrabold text-gray-900">NRP 1,000</div>
-               <button className="border-2 border-[#137333] text-[#137333] font-bold py-2.5 px-6 rounded-xl hover:bg-[#E6F4EA] transition-colors">
-                 View Courses
-               </button>
+               <div className="text-lg font-extrabold text-black">NRP 1,000</div>
+                <button className="bg-[#137333] text-white font-bold py-2 px-5 rounded-lg text-sm hover:bg-[#0f5c28] transition-colors">
+                  View Courses
+                </button>
             </div>
           </div>
 
           {/* Intermediate Card */}
-          <div className="bg-white rounded-3xl border border-[#3B28CC] p-8 flex flex-col shadow-[0_8px_30px_rgba(59,40,204,0.12)] relative overflow-hidden transform scale-105 z-10">
-            <div className="bg-[#EEF2FF] text-[#3B28CC] text-xs font-bold px-3 py-1 rounded-full w-fit mb-6 tracking-wide uppercase">Intermediate</div>
-            <div className="flex items-center mb-6">
+          <div className="bg-[#F6F6F680] rounded-[10px] border-2 border-[#D9D9D9] pt-[10px] pr-[25px] pb-[10px] pl-[25px] flex flex-col shadow-[0_8px_30px_rgba(59,40,204,0.12)] relative overflow-hidden transform scale-105 z-10 flex-1 min-h-[380px]">
+            <div className="bg-[#EEF2FF] text-[#3B28CC] text-xs font-bold px-3 py-1 rounded-full w-fit mb-5 tracking-wide uppercase">Intermediate</div>
+            <div className="flex items-center mb-5">
                <div className="w-12 h-12 rounded-xl bg-[#EEF2FF] flex items-center justify-center mr-4">
                  <svg className="w-6 h-6 text-[#3B28CC]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
                </div>
                <div>
-                 <h3 className="text-xl font-bold text-gray-900">PTE Score Booster</h3>
-                 <p className="text-sm font-medium text-gray-500">Target Score: 50-70</p>
+                  <h3 className="text-[19px] font-bold text-black">PTE Score Booster</h3>
+                 <p className="text-xs font-medium text-gray-500">Target Score: 50-70</p>
                </div>
             </div>
-            <ul className="space-y-3 mb-8 flex-1">
+            <ul className="space-y-2.5 mb-5 flex-1">
               {['Speaking Strategies', 'Easy Writing', 'Summarize Written Text', 'Reading Techniques', 'Listening Strategies', 'Weekly Mock Tests'].map((feature, i) => (
                 <li key={i} className="flex items-start">
-                  <svg className="w-5 h-5 text-[#3B28CC] mr-3 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-                  <span className="text-sm font-medium text-gray-700">{feature}</span>
+                  <svg className="w-4 h-4 text-[#3B28CC] mr-2.5 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+                  <span className="text-[15px] font-medium text-black">{feature}</span>
                 </li>
               ))}
             </ul>
-            <div className="flex items-center justify-between border-t border-gray-100 pt-6 mb-6">
-               <div className="flex items-center text-sm font-bold text-gray-900">
-                  <svg className="w-5 h-5 text-[#3B28CC] mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="10" strokeWidth={2}/><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6l4 2"/></svg>
-                  <div>Duration<br/><span className="font-extrabold text-[#3B28CC]">6 Weeks</span></div>
+            <div className="flex items-center justify-center gap-5 border-2 border-[#D9D9D9] rounded-lg px-5 py-3 mb-4">
+               <div className="flex items-center text-xs font-bold text-black">
+                  <svg className="w-[19px] h-[19px] text-[#3B28CC] mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="10" strokeWidth={2}/><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6l4 2"/></svg>
+                  <div className="leading-tight">Duration<br/><span className="font-extrabold text-[#3B28CC]">6 Weeks</span></div>
                </div>
-               <div className="flex items-center text-sm font-bold text-gray-900">
-                  <svg className="w-5 h-5 text-[#3B28CC] mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
-                  <div>Lessons<br/><span className="font-extrabold text-[#3B28CC]">60+</span></div>
+               <div className="w-[1.5px] h-[30px] bg-[#D9D9D9] flex-shrink-0" />
+               <div className="flex items-center text-xs font-bold text-black">
+                  <svg className="w-[19px] h-[19px] text-[#3B28CC] mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                  <div className="leading-tight">Lessons<br/><span className="font-extrabold text-[#3B28CC]">60+</span></div>
                </div>
             </div>
             <div className="flex items-center justify-between">
-               <div className="text-xl font-extrabold text-gray-900">NRP 1,500</div>
-               <button className="bg-[#EEF2FF] border-2 border-[#3B28CC] text-[#3B28CC] font-bold py-2.5 px-6 rounded-xl hover:bg-[#E0E7FF] transition-colors">
-                 View Courses
-               </button>
+               <div className="text-lg font-extrabold text-black">NRP 1,500</div>
+                <button className="bg-[#3B28CC] text-white font-bold py-2 px-5 rounded-lg text-sm hover:bg-[#2d1fa3] transition-colors">
+                  View Courses
+                </button>
             </div>
           </div>
 
           {/* Advanced Card */}
-          <div className="bg-white rounded-3xl border border-gray-200 p-8 flex flex-col shadow-sm hover:shadow-xl transition-shadow relative overflow-hidden">
-            <div className="bg-[#F3E8FF] text-[#7E22CE] text-xs font-bold px-3 py-1 rounded-full w-fit mb-6 tracking-wide uppercase">Advanced</div>
-            <div className="flex items-center mb-6">
+          <div className="bg-[#F6F6F680] rounded-[10px] border-2 border-[#D9D9D9] pt-[10px] pr-[25px] pb-[10px] pl-[25px] flex flex-col shadow-sm hover:shadow-xl transition-shadow relative overflow-hidden flex-1 min-h-[380px]">
+            <div className="bg-[#F3E8FF] text-[#7E22CE] text-xs font-bold px-3 py-1 rounded-full w-fit mb-5 tracking-wide uppercase">Advanced</div>
+            <div className="flex items-center mb-5">
                <div className="w-12 h-12 rounded-xl bg-[#F3E8FF] flex items-center justify-center mr-4">
                  <svg className="w-6 h-6 text-[#7E22CE]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
                </div>
                <div>
-                 <h3 className="text-xl font-bold text-gray-900">PTE 80+ Mastery</h3>
-                 <p className="text-sm font-medium text-gray-500">Target Score: 80-100</p>
+                  <h3 className="text-[19px] font-bold text-black">PTE 80+ Mastery</h3>
+                 <p className="text-xs font-medium text-gray-500">Target Score: 80-100</p>
                </div>
             </div>
-            <ul className="space-y-3 mb-8 flex-1">
+            <ul className="space-y-2.5 mb-5 flex-1">
               {['Advanced Templates', 'AI Feedback & Evaluation', 'Full-Length Mock Tests', 'Performance Analytics', 'Expert Guidance & Mentoring', 'Personalized Study Plan'].map((feature, i) => (
                 <li key={i} className="flex items-start">
-                  <svg className="w-5 h-5 text-[#7E22CE] mr-3 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-                  <span className="text-sm font-medium text-gray-700">{feature}</span>
+                  <svg className="w-4 h-4 text-[#7E22CE] mr-2.5 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+                  <span className="text-[15px] font-medium text-black">{feature}</span>
                 </li>
               ))}
             </ul>
-            <div className="flex items-center justify-between border-t border-gray-100 pt-6 mb-6">
-               <div className="flex items-center text-sm font-bold text-gray-900">
-                  <svg className="w-5 h-5 text-[#7E22CE] mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="10" strokeWidth={2}/><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6l4 2"/></svg>
-                  <div>Duration<br/><span className="font-extrabold text-[#7E22CE]">8 Weeks</span></div>
+            <div className="flex items-center justify-center gap-5 border-2 border-[#D9D9D9] rounded-lg px-5 py-3 mb-4">
+               <div className="flex items-center text-xs font-bold text-black">
+                  <svg className="w-[19px] h-[19px] text-[#7E22CE] mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="10" strokeWidth={2}/><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6l4 2"/></svg>
+                  <div className="leading-tight">Duration<br/><span className="font-extrabold text-[#7E22CE]">8 Weeks</span></div>
                </div>
-               <div className="flex items-center text-sm font-bold text-gray-900">
-                  <svg className="w-5 h-5 text-[#7E22CE] mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
-                  <div>Lessons<br/><span className="font-extrabold text-[#7E22CE]">80+</span></div>
+               <div className="w-[1.5px] h-[30px] bg-[#D9D9D9] flex-shrink-0" />
+               <div className="flex items-center text-xs font-bold text-black">
+                  <svg className="w-[19px] h-[19px] text-[#7E22CE] mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                  <div className="leading-tight">Lessons<br/><span className="font-extrabold text-[#7E22CE]">80+</span></div>
                </div>
             </div>
             <div className="flex items-center justify-between">
-               <div className="text-xl font-extrabold text-gray-900">NRP 3,500</div>
-               <button className="border-2 border-[#7E22CE] text-[#7E22CE] font-bold py-2.5 px-6 rounded-xl hover:bg-[#F3E8FF] transition-colors">
-                 View Courses
-               </button>
+               <div className="text-lg font-extrabold text-black">NRP 3,500</div>
+                <button className="bg-[#7E22CE] text-white font-bold py-2 px-5 rounded-lg text-sm hover:bg-[#6b1db5] transition-colors">
+                  View Courses
+                </button>
             </div>
           </div>
         </div>
@@ -364,7 +367,7 @@ export default function CoursesPage() {
                           </div>
                        </div>
                        <p className="text-xs text-gray-600 mb-6 flex-1 italic">"{t.text}"</p>
-                       <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                       <div className="flex items-center justify-between pt-4 border-t-2 border-[#D9D9D9]">
                           <div className={`text-xs font-bold px-2 py-1 rounded ${t.color} ${t.tColor} flex items-center`}>
                              <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z" /><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z" /></svg>
                              PTE Score: {t.score}
