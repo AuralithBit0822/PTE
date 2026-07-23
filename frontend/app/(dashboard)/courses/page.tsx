@@ -296,16 +296,16 @@ export default function CoursesPage() {
       </section>
 
       {/* 5. Journey & Testimonials */}
-      <section className="bg-[#FAFAFA] py-20 w-full">
+      <section className="bg-white py-20 w-full">
         <div className="grid grid-cols-2 gap-[20px]">
            {/* Left: Journey */}
-           <div className="bg-white rounded-2xl border-2 border-[#D9D9D9] px-8 pt-[4px] pb-[4px]">
-              <h2 className="text-[29px] font-extrabold text-black mb-[122px] pt-[4px]">Your PTE Learning Journey</h2>
-              <div className="flex items-center justify-between relative mt-6">
+            <div className="bg-white rounded-2xl px-8 py-8 flex flex-col items-center justify-center min-h-[400px]">
+               <h2 className="text-[29px] font-extrabold text-black pt-[4px] text-center mb-8">Your PTE Learning Journey</h2>
+              <div className="flex items-center justify-between relative w-full">
                  <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gray-200 -z-10 -translate-y-6"></div>
                  
                   <div className="flex flex-col items-center text-center">
-                     <div className="w-[51px] h-[51px] rounded-full bg-[#E6F4EA] flex items-center justify-center mb-3 border-4 border-white shadow-sm">
+                     <div className="w-[67px] h-[67px] rounded-full bg-[#E6F4EA] flex items-center justify-center mb-3 border-4 border-white shadow-sm">
                         <span className="text-xl">🌱</span>
                      </div>
                      <div className="font-extrabold text-black text-sm">1<br/>Foundation</div>
@@ -315,7 +315,7 @@ export default function CoursesPage() {
                   <svg className="w-4 h-4 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" /></svg>
 
                   <div className="flex flex-col items-center text-center">
-                     <div className="w-[51px] h-[51px] rounded-full bg-[#E0F2FE] flex items-center justify-center mb-3 border-4 border-white shadow-sm">
+                     <div className="w-[67px] h-[67px] rounded-full bg-[#E0F2FE] flex items-center justify-center mb-3 border-4 border-white shadow-sm">
                         <span className="text-xl">📈</span>
                      </div>
                      <div className="font-extrabold text-black text-sm">2<br/>Score Booster</div>
@@ -325,7 +325,7 @@ export default function CoursesPage() {
                   <svg className="w-4 h-4 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" /></svg>
 
                   <div className="flex flex-col items-center text-center">
-                     <div className="w-[51px] h-[51px] rounded-full bg-[#F3E8FF] flex items-center justify-center mb-3 border-4 border-white shadow-sm">
+                     <div className="w-[67px] h-[67px] rounded-full bg-[#F3E8FF] flex items-center justify-center mb-3 border-4 border-white shadow-sm">
                         <span className="text-xl">🎯</span>
                      </div>
                      <div className="font-extrabold text-black text-sm">3<br/>79+ Mastery</div>
@@ -335,7 +335,7 @@ export default function CoursesPage() {
                   <svg className="w-4 h-4 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" /></svg>
 
                   <div className="flex flex-col items-center text-center">
-                     <div className="w-[51px] h-[51px] rounded-full bg-yellow-100 flex items-center justify-center mb-3 border-4 border-white shadow-sm">
+                     <div className="w-[67px] h-[67px] rounded-full bg-yellow-100 flex items-center justify-center mb-3 border-4 border-white shadow-sm">
                         <span className="text-xl">🏆</span>
                      </div>
                      <div className="font-extrabold text-black text-sm">Real Exam</div>
@@ -345,10 +345,10 @@ export default function CoursesPage() {
            </div>
 
            {/* Right: Testimonials */}
-           <div className="bg-white rounded-2xl border-2 border-[#D9D9D9] px-8 pt-[4px] pb-[4px] overflow-hidden">
-              <div className="mb-8 pt-[4px]">
-                 <h2 className="text-2xl font-extrabold text-black">Recent Student Achievement</h2>
-              </div>
+            <div className="bg-white rounded-2xl border-2 border-[#D9D9D9] px-8 pt-[4px] pb-[4px] overflow-hidden">
+               <div className="mb-8 pt-[4px] text-center">
+                  <h2 className="text-2xl font-extrabold text-black">Recent Student Achievement</h2>
+               </div>
               <div className="relative h-[280px] overflow-hidden">
                  <div className="absolute inset-0 flex flex-row gap-4 animate-scroll-horizontal w-max">
                     {[
