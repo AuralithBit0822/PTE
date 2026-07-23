@@ -228,6 +228,7 @@ function ReadAloudTask() {
   const [isRecording, setIsRecording] = useState(false);
   const [elapsedSeconds, setElapsedSeconds] = useState(0);
   const [hasRecorded, setHasRecorded] = useState(false);
+  const [recordedSet, setRecordedSet] = useState<Set<number>>(new Set());
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
@@ -237,6 +238,7 @@ function ReadAloudTask() {
           if (prev + 1 >= RECORD_LIMIT_SECONDS) {
             setIsRecording(false);
             setHasRecorded(true);
+            setRecordedSet((p) => new Set(p).add(currentIndex));
             return RECORD_LIMIT_SECONDS;
           }
           return prev + 1;
@@ -252,6 +254,7 @@ function ReadAloudTask() {
     if (isRecording) {
       setIsRecording(false);
       setHasRecorded(true);
+      setRecordedSet((prev) => new Set(prev).add(currentIndex));
     } else {
       setElapsedSeconds(0);
       setHasRecorded(false);
@@ -288,7 +291,7 @@ function ReadAloudTask() {
       <div className="task-layout">
         <TaskSidebar
           activeTaskId="read-aloud"
-          progress={{ current: currentIndex + 1, total: TOTAL_QUESTIONS }}
+          progress={{ current: recordedSet.size, total: TOTAL_QUESTIONS }}
         />
 
         <section className="task-main">
