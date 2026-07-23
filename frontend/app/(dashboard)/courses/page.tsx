@@ -6,62 +6,70 @@ export default function CoursesPage() {
   return (
     <div className="min-h-screen bg-white font-sans">
       {/* 1. Hero Section */}
-      <section className="bg-[#FAFAFA] pt-16 pb-20 px-4 md:px-8 lg:px-16 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
+      <section className="bg-[#F5F3FF] overflow-hidden">
+        <div className="pl-[110px] pr-[10px] pt-[12px]">
+          <div className="flex items-center min-h-[486px]">
+
           {/* Left Content */}
-          <div className="flex-1 max-w-2xl z-10">
-            <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 leading-[1.15] tracking-tight mb-6">
-              Master PTE with <br />
-              <span className="text-[#3B28CC]">Structured Learning Paths</span>
+          <div className="w-[44%] py-14 pr-6 flex-shrink-0">
+            <h1 className="text-[2rem] font-extrabold text-gray-900 leading-[1.18] mb-5">
+              Master PTE with{' '}
+              <span className="text-indigo-600">Structured Learning Paths</span>
             </h1>
-            <p className="text-lg text-gray-600 mb-10 max-w-lg leading-relaxed font-medium">
+            <p className="text-gray-900 text-[15px] leading-relaxed mb-8 max-w-[420px] font-medium">
               Choose the right course based on your current level and target score. Learn smarter and achieve more.
             </p>
-            
-            <div className="flex flex-wrap items-center gap-4 mb-12">
-              <button className="bg-[#3B28CC] hover:bg-blue-700 text-white font-bold py-3.5 px-8 rounded-xl transition-colors">
+
+            {/* CTA Buttons */}
+            <div className="flex items-center gap-4 mb-10">
+              <button className="flex items-center gap-2 bg-[#3008F8] text-white px-6 py-3 rounded-lg font-semibold text-sm hover:bg-[#2506c4] transition-all duration-200 shadow-md">
                 Explore Courses
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                </svg>
               </button>
-              <button className="bg-white border border-[#E5E7EB] text-[#3B28CC] font-bold py-3.5 px-6 rounded-xl flex items-center shadow-sm hover:shadow-md transition-shadow">
-                <div className="bg-[#EEF2FF] p-1 rounded mr-3">
-                   <svg className="w-5 h-5 text-[#3B28CC]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                </div>
+              <button className="px-6 py-3 text-[16px] font-semibold text-[#3008F8] bg-white border-2 border-[#D9D9D9] rounded-lg hover:border-[#3008F8] transition-all duration-200">
                 Take Placement Quiz
               </button>
             </div>
 
-            <div className="flex flex-wrap gap-4">
-              <div className="flex items-center bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-50 py-3 px-5">
-                <div className="w-9 h-9 rounded-full bg-[#EEF2FF] flex items-center justify-center mr-3">
-                  <svg className="w-5 h-5 text-[#3B28CC]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+            {/* Stats Row */}
+            <div className="w-[606px] h-[63px] flex items-center gap-[17px] rounded-[7px] border-[1.5px] border-[#D9D9D9] p-[7px] bg-white" style={{ boxShadow: '1px 1px 10px 0px #0000001A' }}>
+              {/* Badge 1 */}
+              <div className="flex items-center gap-2 flex-1">
+                <Image src="/images/Vector.png" alt="Expert Trainers" width={28} height={28} />
+                <div>
+                  <p className="text-[15px] font-bold text-gray-900 leading-tight">Expert Trainers</p>
                 </div>
-                <span className="font-bold text-gray-900 text-sm">Expert Trainers</span>
               </div>
-              <div className="flex items-center bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-50 py-3 px-5">
-                <div className="w-9 h-9 rounded-full bg-[#EEF2FF] flex items-center justify-center mr-3">
-                  <svg className="w-5 h-5 text-[#3B28CC]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+
+              <div className="w-[1.5px] h-[35px] bg-gray-200 flex-shrink-0" />
+
+              {/* Badge 2 */}
+              <div className="flex items-center gap-2 flex-1">
+                <Image src="/images/Vector (1).png" alt="AI Learning" width={28} height={28} />
+                <div>
+                  <p className="text-[15px] font-bold text-gray-900 leading-tight">AI-Powered Learning</p>
                 </div>
-                <span className="font-bold text-gray-900 text-sm">AI-Powered Learning</span>
               </div>
-              <div className="flex items-center bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-50 py-3 px-5">
-                <div className="w-9 h-9 rounded-full bg-[#EEF2FF] flex items-center justify-center mr-3">
-                  <svg className="w-5 h-5 text-[#3B28CC]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+
+              <div className="w-[1.5px] h-[35px] bg-gray-200 flex-shrink-0" />
+
+              {/* Badge 3 */}
+              <div className="flex items-center gap-2 flex-1">
+                <Image src="/images/Vector (2).png" alt="Mock Tests" width={28} height={28} />
+                <div>
+                  <p className="text-[15px] font-bold text-gray-900 leading-tight">Real Exam Simulation</p>
                 </div>
-                <span className="font-bold text-gray-900 text-sm">Real Exam Simulation</span>
               </div>
             </div>
           </div>
 
-          {/* Right Content - Hero Image Placeholder */}
-          <div className="flex-1 relative w-full h-[450px] flex items-center justify-center">
-             <div className="w-[90%] h-[90%] bg-gray-200 rounded-3xl overflow-hidden relative shadow-lg border-4 border-white">
-                <div className="absolute inset-0 flex items-center justify-center text-gray-500 font-medium">Hero Image (Student)</div>
-             </div>
-             {/* Floating elements matching design */}
-             <div className="absolute top-10 right-0 bg-white p-3 rounded-xl shadow-lg border border-gray-100 z-20 flex flex-col items-center">
-                <div className="text-xs font-bold text-gray-900 mb-2">Achieve Your<br/>Target Score</div>
-                <div className="w-16 h-12 bg-gray-100 rounded-md"></div>
-             </div>
+          {/* Right Content - Hero Image */}
+          <div className="w-[694px] relative h-[326px] flex-shrink-0 overflow-visible ml-[70px]">
+            <Image src="/images/Frame 1472.png" alt="Student studying" fill className="object-contain" />
+          </div>
+
           </div>
         </div>
       </section>
