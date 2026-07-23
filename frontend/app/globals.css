@@ -321,7 +321,7 @@
 /* ── Speaking Question Types ── */
 .speaking-types-section { padding-top: 4rem; padding-bottom: 4rem;}
 .section-title-center { text-align: center; font-size: clamp(1.5rem, 2.2vw, 2rem); font-weight: 800; margin-bottom: 2.5rem; }
-.speaking-types-layout { display: grid; grid-template-columns: 1.2fr 300px; gap: 1.5rem; align-items: stretch; }
+.speaking-types-layout { display: grid; grid-template-columns: 1.2fr 260px; gap: 1.5rem; align-items: stretch; }
 .speaking-types-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(2, 1fr); gap: 1rem; }
 .speaking-type-card {
   background: #fff; border: 1px solid #e6e6ee; border-radius: 14px;
@@ -460,4 +460,52 @@
   .writing-skills-grid { grid-template-columns: 1fr; }
   .writing-task-illustration { display: none; }
   .writing-task-card > .writing-task-copy > p { max-width: 100%; }
+}
+/* ══════════════════════════════════════════════
+   Reading Practice page (/practice/reading)
+   ══════════════════════════════════════════════ */
+
+.reading-hero { background: rgba(246, 244, 253, 1); }
+.reading-hero-visual { background: #f2effc; border-radius: 20px; padding: 24px 0; overflow: visible; }
+.reading-hero .speaking-hero-image { width: 85%; max-width: 440px; }
+
+.reading-floating-doc {
+  top: 8%; left: 8%; width: 44px; height: 44px; border-radius: 12px;
+  background: #fff; display: grid; place-items: center;
+  box-shadow: 0 10px 24px rgba(33,25,138,0.12);
+}
+.reading-floating-doc svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+.reading-feedback-card { top: 42%; left: -4%; min-width: 160px; padding: 12px 14px; font-size: 0.8rem; }
+.reading-feedback-card h4 {
+  display: flex; align-items: center; gap: 6px; font-size: 0.82rem;
+  padding-bottom: 6px; margin-bottom: 6px; border-bottom: 1px solid #eee;
+}
+.reading-feedback-card h4 svg { width: 14px; height: 14px; color: var(--brand-blue); flex-shrink: 0; }
+.reading-feedback-card .ai-feedback-row { font-size: 0.8rem; gap: 12px; padding: 3px 0; }
+.reading-feedback-card .tag-good { font-size: 0.7rem; padding: 1px 8px; }
+
+.reading-book-stack {
+  position: absolute; right: 4%; bottom: 8%; z-index: 3;
+  display: flex; flex-direction: column; width: 130px;
+}
+.reading-book-stack span {
+  background: var(--brand-blue); color: #fff; font-weight: 700; font-size: 0.78rem;
+  padding: 8px 12px; border-radius: 6px; margin-top: -4px;
+  box-shadow: 0 4px 10px rgba(33,25,138,0.2);
+}
+.reading-book-stack span:nth-child(2) { background: #4527f5; }
+.reading-book-stack span:nth-child(3) { background: #5b3ffb; }
+
+/* Plain underlined overview rows (Reading page uses these instead of progress bars) */
+.overview-plain-rows { width: 100%; display: flex; flex-direction: column; gap: 0.9rem; margin-bottom: 1.5rem; }
+.overview-plain-row {
+  display: flex; align-items: baseline; justify-content: space-between;
+  padding-bottom: 6px; border-bottom: 2px solid #1a1a2e;
+}
+.overview-plain-label { font-weight: 600; font-size: 0.95rem; color: #1a1a2e; }
+.overview-plain-value { font-weight: 700; font-size: 0.95rem; color: #1a1a2e; }
+
+@media (max-width: 1100px) {
+  .reading-book-stack { display: none; }
 }
