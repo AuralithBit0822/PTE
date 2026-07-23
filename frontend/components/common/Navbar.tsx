@@ -28,7 +28,7 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <Image src="/images/image_ada94b1b 1.png" alt="PTE Prep" width={50} height={50} className="rounded-full bg-[rgba(74,45,219,0.2)]" />
+          <Image src="/images/PTElogo.png" alt="PTE Prep" width={50} height={50} className="rounded-full bg-[rgba(74,45,219,0.2)]" />
           <span className="text-[22px] font-[800] tracking-tight">
             <span className="text-indigo-600">PTE.</span>
             <span className="text-indigo-600">Prep</span>

@@ -50,9 +50,7 @@ export default function Footer() {
           <div className="col-span-1">
             {/* Logo */}
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-12 h-12 rounded-full bg-[#3008F8] flex items-center justify-center overflow-hidden flex-shrink-0">
-                <Image src="/images/PTElogo.png" alt="PTE Prep Logo" width={48} height={48} className="rounded-full object-cover" />
-              </div>
+              <Image src="/images/PTElogo.png" alt="PTE Prep Logo" width={48} height={48} className="rounded-full bg-[rgba(74,45,219,0.2)] flex-shrink-0" />
               <span className="text-[17px] font-bold">
                 <span className="text-gray-900">PTE.</span>
                 <span className="text-gray-900">Prep</span>
