@@ -199,7 +199,7 @@ export default function CoursesPage() {
       </section>
 
       {/* 3. Skill-Based Courses */}
-      <section className="bg-[#FAFAFA] py-20">
+      <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
           <div className="flex items-center justify-between mb-10">
             <h2 className="text-3xl font-extrabold text-gray-900">Skill-Based Courses</h2>
@@ -215,7 +215,7 @@ export default function CoursesPage() {
               { title: 'Listening Mastery', icon: 'M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3', evalText: 'Audio Practice Exercises' },
               { title: 'Reading Mastery', icon: 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253', evalText: 'AI Speaking Evaluation' },
             ].map((skill, idx) => (
-              <div key={idx} className="bg-[#F6F6F6] rounded-2xl border border-[#D9D9D9] p-6 flex flex-col shadow-sm hover:shadow-md transition-shadow">
+              <div key={idx} className="bg-[#F6F6F6] rounded-2xl border border-[#000000] p-6 flex flex-col shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-center mb-6">
                   <div className="w-10 h-10 rounded-lg bg-[#E0DAFE] flex items-center justify-center mr-3">
                     <svg className="w-5 h-5 text-[#3B28CC]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -252,15 +252,15 @@ export default function CoursesPage() {
       </section>
 
       {/* 4. Comparison Table */}
-      <section className="max-w-5xl mx-auto px-4 md:px-8 py-20">
-        <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+      <section className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 py-20">
+        <div className="bg-white rounded-2xl border border-[#000000] overflow-hidden shadow-sm">
           <table className="w-full text-center border-collapse">
             <thead>
-              <tr className="bg-gray-50 border-b border-gray-200">
-                <th className="py-5 px-4 text-left font-extrabold text-gray-900 border-r border-gray-200 w-1/4">Features</th>
-                <th className="py-5 px-4 font-extrabold text-[#137333] border-r border-gray-200 bg-[#E6F4EA]/30">PTE Foundation<br/><span className="text-sm">30-50</span></th>
-                <th className="py-5 px-4 font-extrabold text-[#0284C7] border-r border-gray-200 bg-[#E0F2FE]/30">PTE Score Booster<br/><span className="text-sm">50-70</span></th>
-                <th className="py-5 px-4 font-extrabold text-[#7E22CE] bg-[#F3E8FF]/30">PTE 80+ Mastery<br/><span className="text-sm">80-100</span></th>
+              <tr className="bg-gray-50 border-b border-[#000000]">
+                <th className="py-5 px-6 text-left font-extrabold text-black border-r border-[#000000] w-1/4 text-[16px] bg-[#D9D9D91A]">Features</th>
+                <th className="py-5 px-4 font-extrabold text-[#137333] border-r border-[#000000] bg-[#00610E1A] text-[16px]">PTE Foundation<br/><span className="text-[14px] font-bold">30-50</span></th>
+                <th className="py-5 px-4 font-extrabold text-[#0284C7] border-r border-[#000000] bg-[#E1EDFA] text-[16px]">PTE Score Booster<br/><span className="text-[14px] font-bold">50-70</span></th>
+                <th className="py-5 px-4 font-extrabold text-[#7E22CE] bg-[#E1D7FB] text-[16px]">PTE 80+ Mastery<br/><span className="text-[14px] font-bold">80-100</span></th>
               </tr>
             </thead>
             <tbody>
@@ -274,21 +274,21 @@ export default function CoursesPage() {
                 { name: 'Performance Analytics', f: false, s: true, m: true },
                 { name: 'Certificate of Completion', f: false, s: false, m: true },
               ].map((row, i) => (
-                <tr key={i} className="border-b border-gray-200 last:border-0 hover:bg-gray-50 transition-colors">
-                  <td className="py-4 px-6 text-left font-bold text-gray-700 border-r border-gray-200 flex items-center">
-                     <svg className="w-5 h-5 text-gray-400 mr-3 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
-                     {row.name}
-                  </td>
-                  <td className="py-4 px-4 border-r border-gray-200">
-                    {row.f ? <svg className="w-6 h-6 text-[#137333] mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg> : <svg className="w-6 h-6 text-red-400 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" /></svg>}
-                  </td>
-                  <td className="py-4 px-4 border-r border-gray-200">
-                    {row.s ? <svg className="w-6 h-6 text-[#137333] mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg> : <svg className="w-6 h-6 text-red-400 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" /></svg>}
-                  </td>
-                  <td className="py-4 px-4">
-                    {row.m ? <svg className="w-6 h-6 text-[#137333] mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg> : <svg className="w-6 h-6 text-red-400 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" /></svg>}
-                  </td>
-                </tr>
+                <tr key={i} className="border-b border-[#000000] last:border-0 hover:bg-gray-50 transition-colors">
+                   <td className="py-4 px-6 text-left text-black border-r border-[#000000] flex items-center text-[16px] bg-[#D9D9D91A]">
+                      <svg className="w-5 h-5 text-gray-400 mr-3 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                      {row.name}
+                   </td>
+                   <td className="py-4 px-4 border-r border-[#000000] bg-[#00610E1A]">
+                     {row.f ? <svg className="w-6 h-6 text-[#137333] mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg> : <svg className="w-6 h-6 text-red-400 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" /></svg>}
+                   </td>
+                   <td className="py-4 px-4 border-r border-[#000000] bg-[#E1EDFA]">
+                     {row.s ? <svg className="w-6 h-6 text-[#137333] mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg> : <svg className="w-6 h-6 text-red-400 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" /></svg>}
+                   </td>
+                   <td className="py-4 px-4 bg-[#E1D7FB]">
+                     {row.m ? <svg className="w-6 h-6 text-[#137333] mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg> : <svg className="w-6 h-6 text-red-400 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" /></svg>}
+                   </td>
+                 </tr>
               ))}
             </tbody>
           </table>
@@ -367,7 +367,7 @@ export default function CoursesPage() {
                           </div>
                        </div>
                        <p className="text-xs text-gray-600 mb-6 flex-1 italic">"{t.text}"</p>
-                       <div className="flex items-center justify-between pt-4 border-t-2 border-[#D9D9D9]">
+                       <div className="flex items-center justify-between pt-4 border-t-2 border-[#000000]">
                           <div className={`text-xs font-bold px-2 py-1 rounded ${t.color} ${t.tColor} flex items-center`}>
                              <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z" /><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z" /></svg>
                              PTE Score: {t.score}
