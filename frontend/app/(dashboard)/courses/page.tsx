@@ -215,9 +215,9 @@ export default function CoursesPage() {
               { title: 'Listening Mastery', icon: 'M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3', evalText: 'Audio Practice Exercises' },
               { title: 'Reading Mastery', icon: 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253', evalText: 'AI Speaking Evaluation' },
             ].map((skill, idx) => (
-              <div key={idx} className="bg-white rounded-2xl border border-gray-100 p-6 flex flex-col shadow-sm hover:shadow-md transition-shadow">
+              <div key={idx} className="bg-[#F6F6F6] rounded-2xl border border-[#D9D9D9] p-6 flex flex-col shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-center mb-6">
-                  <div className="w-10 h-10 rounded-lg bg-[#EEF2FF] flex items-center justify-center mr-3">
+                  <div className="w-10 h-10 rounded-lg bg-[#E0DAFE] flex items-center justify-center mr-3">
                     <svg className="w-5 h-5 text-[#3B28CC]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={skill.icon} />
                     </svg>
@@ -225,24 +225,24 @@ export default function CoursesPage() {
                   <h3 className="font-bold text-gray-900">{skill.title}</h3>
                 </div>
                 <ul className="space-y-3 mb-8 flex-1">
-                  <li className="flex items-center text-sm text-gray-600 font-medium">
+                  <li className="flex items-center text-sm text-black font-medium">
                     <svg className="w-4 h-4 text-gray-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                     25+ Video Lessons
                   </li>
-                  <li className="flex items-center text-sm text-gray-600 font-medium">
+                  <li className="flex items-center text-sm text-black font-medium">
                     <svg className="w-4 h-4 text-gray-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                     150+ Practice Questions
                   </li>
-                  <li className="flex items-center text-sm text-gray-600 font-medium">
+                  <li className="flex items-center text-sm text-black font-medium">
                     <svg className="w-4 h-4 text-gray-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                     {skill.text2 || skill.evalText}
                   </li>
-                  <li className="flex items-center text-sm text-gray-600 font-medium">
+                  <li className="flex items-center text-sm text-black font-medium">
                     <svg className="w-4 h-4 text-gray-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                     Progress Tracking
                   </li>
                 </ul>
-                <Link href="#" className="text-[#3B28CC] font-bold text-sm flex items-center hover:underline">
+                <Link href="#" className="text-[#3008F8] font-bold text-sm flex items-center hover:underline">
                   Start Learning <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                 </Link>
               </div>
