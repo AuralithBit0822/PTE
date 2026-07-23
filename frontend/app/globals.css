@@ -66,6 +66,40 @@
   }
 }
 
+@keyframes scroll-vertical {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.animate-scroll-vertical {
+  animation: scroll-vertical 30s linear infinite;
+}
+
+.animate-scroll-vertical:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-horizontal {
+  animation: scroll-horizontal 30s linear infinite;
+}
+
+.animate-scroll-horizontal:hover {
+  animation-play-state: paused;
+}
+
 /* ── Practice Page (Plain CSS) ── */
 .practice-page { min-height: 100vh; background: #fff; }
 

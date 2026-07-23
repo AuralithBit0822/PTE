@@ -296,19 +296,19 @@ export default function CoursesPage() {
       </section>
 
       {/* 5. Journey & Testimonials */}
-      <section className="bg-[#FAFAFA] py-20">
-        <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <section className="bg-[#FAFAFA] py-20 w-full">
+        <div className="grid grid-cols-2 gap-[20px]">
            {/* Left: Journey */}
-           <div className="bg-white rounded-3xl border border-gray-200 p-8 shadow-sm">
-              <h2 className="text-2xl font-extrabold text-gray-900 mb-10">Your PTE Learning Journey</h2>
-              <div className="flex items-center justify-between relative mt-8">
+           <div className="bg-white rounded-2xl border-2 border-[#D9D9D9] px-8 pt-[4px] pb-[4px]">
+              <h2 className="text-[29px] font-extrabold text-black mb-[122px] pt-[4px]">Your PTE Learning Journey</h2>
+              <div className="flex items-center justify-between relative mt-6">
                  <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gray-200 -z-10 -translate-y-6"></div>
                  
                  <div className="flex flex-col items-center text-center">
                     <div className="w-12 h-12 rounded-full bg-[#E6F4EA] flex items-center justify-center mb-3 border-4 border-white shadow-sm">
                        <span className="text-xl">🌱</span>
                     </div>
-                    <div className="font-extrabold text-gray-900 text-sm">1<br/>Foundation</div>
+                    <div className="font-extrabold text-black text-sm">1<br/>Foundation</div>
                     <div className="text-[10px] text-gray-500 font-medium">(Score 30-50)</div>
                  </div>
 
@@ -318,7 +318,7 @@ export default function CoursesPage() {
                     <div className="w-12 h-12 rounded-full bg-[#E0F2FE] flex items-center justify-center mb-3 border-4 border-white shadow-sm">
                        <span className="text-xl">📈</span>
                     </div>
-                    <div className="font-extrabold text-gray-900 text-sm">2<br/>Score Booster</div>
+                    <div className="font-extrabold text-black text-sm">2<br/>Score Booster</div>
                     <div className="text-[10px] text-gray-500 font-medium">(Score 60-70)</div>
                  </div>
 
@@ -328,7 +328,7 @@ export default function CoursesPage() {
                     <div className="w-12 h-12 rounded-full bg-[#F3E8FF] flex items-center justify-center mb-3 border-4 border-white shadow-sm">
                        <span className="text-xl">🎯</span>
                     </div>
-                    <div className="font-extrabold text-gray-900 text-sm">3<br/>79+ Mastery</div>
+                    <div className="font-extrabold text-black text-sm">3<br/>79+ Mastery</div>
                     <div className="text-[10px] text-gray-500 font-medium">(Score 80+)</div>
                  </div>
 
@@ -338,46 +338,84 @@ export default function CoursesPage() {
                     <div className="w-12 h-12 rounded-full bg-yellow-100 flex items-center justify-center mb-3 border-4 border-white shadow-sm">
                        <span className="text-xl">🏆</span>
                     </div>
-                    <div className="font-extrabold text-gray-900 text-sm">Real Exam</div>
+                    <div className="font-extrabold text-black text-sm">Real Exam</div>
                     <div className="text-[10px] text-gray-500 font-medium">Achieve success.</div>
                  </div>
               </div>
            </div>
 
            {/* Right: Testimonials */}
-           <div>
-              <div className="flex items-center justify-between mb-8">
-                 <h2 className="text-2xl font-extrabold text-gray-900">Recent Student Achievement</h2>
-                 <Link href="#" className="text-gray-900 font-bold flex items-center hover:underline text-sm">
-                   View All <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                 </Link>
+           <div className="bg-white rounded-2xl border-2 border-[#D9D9D9] px-8 pt-[4px] pb-[4px] overflow-hidden">
+              <div className="mb-8 pt-[4px]">
+                 <h2 className="text-2xl font-extrabold text-black">Recent Student Achievement</h2>
               </div>
-              <div className="flex gap-4 overflow-x-auto pb-4">
-                 {[
-                   { name: 'Riya Sharma', text: 'The AI speaking feedback helped me improve my fluency and pronunciation significantly.', score: '97%', stars: '5.0', color: 'bg-purple-50', tColor: 'text-purple-600' },
-                   { name: 'Shubham Pandey', text: 'The mock tests felt exactly like the real exam. The detailed analytics helped me focus on weak areas.', score: '94%', stars: '5.0', color: 'bg-orange-50', tColor: 'text-orange-600' },
-                   { name: 'Aayanka Sapkota', text: 'The writing evaluation gave me valuable feedback on grammar and coherence. Highly recommend!', score: '90%', stars: '5.0', color: 'bg-green-50', tColor: 'text-green-600' }
-                 ].map((t, idx) => (
-                    <div key={idx} className="bg-white rounded-2xl border border-gray-200 p-5 min-w-[280px] shadow-sm flex flex-col">
-                       <div className="flex items-center mb-4">
-                          <div className="w-10 h-10 rounded-full bg-gray-200 mr-3 flex-shrink-0"></div>
-                          <div>
-                             <h4 className="font-bold text-gray-900 text-sm">{t.name}</h4>
-                             <div className="text-xs text-gray-500 flex items-center">🇳🇵 Nepal</div>
+              <div className="relative h-[280px] overflow-hidden">
+                 <div className="absolute inset-0 flex flex-row gap-4 animate-scroll-horizontal w-max">
+                    {[
+                      { name: 'Riya Sharma', location: 'Nepal', image: '/images/image 22.png', text: 'The AI speaking feedback helped me improve my fluency and pronunciation significantly. I achieved a PTE score of 67 in just 3 weeks!', score: '67%', rating: '5.0', color: '#3008F826', fullColor: '#3008F8' },
+                      { name: 'Shubham Pandey', location: 'Nepal', image: '/images/image 23.png', text: 'The mock tests felt exactly like the real exam. The detailed one which helped me focus on my weak areas and improve faster.', score: '84%', rating: '5.0', color: '#F8940826', fullColor: '#F89408' },
+                      { name: 'Aayusha Sapkota', location: 'Nepal', image: '/images/image 24.png', text: 'This writing evaluation feature gave me valuable feedback on grammar and coherence. My confidence improved with every practice session.', score: '82%', rating: '5.0', color: '#00F31C26', fullColor: '#00F31C' },
+                      { name: 'Ryan Ghimire', location: 'Nepal', image: '/images/image 25.png', text: 'The AI speaking feedback helped me improve my fluency and overall spoken communication significantly. I achieved a PTE score of 88.', score: '88%', rating: '5.0', color: '#1CE7DD26', fullColor: '#1CE7DD' },
+                      { name: 'Priyanka Thapa', location: 'Nepal', image: '/images/image 26.png', text: 'The platform is excellent, polished, and easy to use. This exam preparation environment was truly life-changing.', score: '85%', rating: '5.0', color: '#F8C80826', fullColor: '#F8C808' },
+                      { name: 'Aryan Chettri', location: 'Nepal', image: '/images/image 27.png', text: 'The AI practice environment really helped me perform better under exam conditions. I felt fully prepared to tackle my weak areas.', score: '80%', rating: '5.0', color: '#08F87C26', fullColor: '#08F87C' },
+                      { name: 'Diya Thakar', location: 'Nepal', image: '/images/image 28.png', text: 'Your data-driven insights and personalized recommendations were tailored specifically for me. This helped me become confident.', score: '71%', rating: '5.0', color: '#F808E826', fullColor: '#F808E8' },
+                      { name: 'Bibek Bhattarai', location: 'Nepal', image: '/images/image 29.png', text: 'Excellent speaking practice features. The platform is profoundly designed and helped me significantly improve my PTE score.', score: '88%', rating: '5.0', color: '#FF151526', fullColor: '#FF1515' },
+                    ].map((t, idx) => (
+                       <div key={idx} className="bg-white rounded-[16px] border border-[#D9D9D9] px-[17px] py-[20px] flex flex-col shrink-0 w-[320px]" style={{ boxShadow: '1px 1px 10px 0px #00000033' }}>
+                          <div className="text-[37px] font-bold leading-none mb-0 font-serif" style={{ color: t.fullColor }}>"</div>
+                          <div className="flex items-center gap-[7px] mb-[7px]">
+                             <Image src={t.image} alt={t.name} width={36} height={36} className="w-[36px] h-[36px] rounded-full object-cover flex-shrink-0 border-2 border-indigo-100" />
+                             <div>
+                                <p className="text-[13px] font-bold text-black leading-tight">{t.name}</p>
+                                <div className="flex items-center gap-[3px]">
+                                   <Image src="/images/Group 92.png" alt="location" width={16} height={19} className="flex-shrink-0" />
+                                   <p className="text-[14px] text-black leading-tight">{t.location}</p>
+                                </div>
+                             </div>
+                          </div>
+                          <p className="text-[13px] text-gray-600 leading-relaxed flex-1 mb-[7px]">{t.text}</p>
+                          <div className="flex items-center justify-between mt-[2px]">
+                             <span className="text-black text-[11px] font-bold px-[11px] py-[5px] rounded-full" style={{ backgroundColor: t.color }}>
+                               PTE Score {t.score}
+                             </span>
+                             <div className="flex items-center gap-[5px]">
+                                <span className="text-yellow-400 text-xl">★</span>
+                                <span className="text-[14px] font-semibold text-black">{t.rating}</span>
+                             </div>
                           </div>
                        </div>
-                       <p className="text-xs text-gray-600 mb-6 flex-1 italic">"{t.text}"</p>
-                       <div className="flex items-center justify-between pt-4 border-t-2 border-[#000000]">
-                          <div className={`text-xs font-bold px-2 py-1 rounded ${t.color} ${t.tColor} flex items-center`}>
-                             <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z" /><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z" /></svg>
-                             PTE Score: {t.score}
+                    ))}
+                    {[
+                      { name: 'Riya Sharma', location: 'Nepal', image: '/images/image 22.png', text: 'The AI speaking feedback helped me improve my fluency and pronunciation significantly. I achieved a PTE score of 67 in just 3 weeks!', score: '67%', rating: '5.0', color: '#3008F826', fullColor: '#3008F8' },
+                      { name: 'Shubham Pandey', location: 'Nepal', image: '/images/image 23.png', text: 'The mock tests felt exactly like the real exam. The detailed one which helped me focus on my weak areas and improve faster.', score: '84%', rating: '5.0', color: '#F8940826', fullColor: '#F89408' },
+                      { name: 'Aayusha Sapkota', location: 'Nepal', image: '/images/image 24.png', text: 'This writing evaluation feature gave me valuable feedback on grammar and coherence. My confidence improved with every practice session.', score: '82%', rating: '5.0', color: '#00F31C26', fullColor: '#00F31C' },
+                      { name: 'Ryan Ghimire', location: 'Nepal', image: '/images/image 25.png', text: 'The AI speaking feedback helped me improve my fluency and overall spoken communication significantly. I achieved a PTE score of 88.', score: '88%', rating: '5.0', color: '#1CE7DD26', fullColor: '#1CE7DD' },
+                    ].map((t, idx) => (
+                       <div key={`dup-${idx}`} className="bg-white rounded-[16px] border border-[#D9D9D9] px-[17px] py-[20px] flex flex-col shrink-0 w-[320px]" style={{ boxShadow: '1px 1px 10px 0px #00000033' }}>
+                          <div className="text-[37px] font-bold leading-none mb-0 font-serif" style={{ color: t.fullColor }}>"</div>
+                          <div className="flex items-center gap-[7px] mb-[7px]">
+                             <Image src={t.image} alt={t.name} width={36} height={36} className="w-[36px] h-[36px] rounded-full object-cover flex-shrink-0 border-2 border-indigo-100" />
+                             <div>
+                                <p className="text-[13px] font-bold text-black leading-tight">{t.name}</p>
+                                <div className="flex items-center gap-[3px]">
+                                   <Image src="/images/Group 92.png" alt="location" width={16} height={19} className="flex-shrink-0" />
+                                   <p className="text-[14px] text-black leading-tight">{t.location}</p>
+                                </div>
+                             </div>
                           </div>
-                          <div className="text-xs font-bold text-gray-900 flex items-center">
-                             <span className="text-yellow-400 mr-1 text-sm">★</span> {t.stars}
+                          <p className="text-[13px] text-gray-600 leading-relaxed flex-1 mb-[7px]">{t.text}</p>
+                          <div className="flex items-center justify-between mt-[2px]">
+                             <span className="text-black text-[11px] font-bold px-[11px] py-[5px] rounded-full" style={{ backgroundColor: t.color }}>
+                               PTE Score {t.score}
+                             </span>
+                             <div className="flex items-center gap-[5px]">
+                                <span className="text-yellow-400 text-xl">★</span>
+                                <span className="text-[14px] font-semibold text-black">{t.rating}</span>
+                             </div>
                           </div>
                        </div>
-                    </div>
-                 ))}
+                    ))}
+                 </div>
               </div>
            </div>
         </div>
