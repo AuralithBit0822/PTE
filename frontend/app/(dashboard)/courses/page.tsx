@@ -304,43 +304,43 @@ export default function CoursesPage() {
               <div className="flex items-center justify-between relative mt-6">
                  <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gray-200 -z-10 -translate-y-6"></div>
                  
-                 <div className="flex flex-col items-center text-center">
-                    <div className="w-12 h-12 rounded-full bg-[#E6F4EA] flex items-center justify-center mb-3 border-4 border-white shadow-sm">
-                       <span className="text-xl">🌱</span>
-                    </div>
-                    <div className="font-extrabold text-black text-sm">1<br/>Foundation</div>
-                    <div className="text-[10px] text-gray-500 font-medium">(Score 30-50)</div>
-                 </div>
+                  <div className="flex flex-col items-center text-center">
+                     <div className="w-[51px] h-[51px] rounded-full bg-[#E6F4EA] flex items-center justify-center mb-3 border-4 border-white shadow-sm">
+                        <span className="text-xl">🌱</span>
+                     </div>
+                     <div className="font-extrabold text-black text-sm">1<br/>Foundation</div>
+                     <div className="text-[10px] text-black font-medium">(Score 30-50)</div>
+                  </div>
 
-                 <svg className="w-4 h-4 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" /></svg>
+                  <svg className="w-4 h-4 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" /></svg>
 
-                 <div className="flex flex-col items-center text-center">
-                    <div className="w-12 h-12 rounded-full bg-[#E0F2FE] flex items-center justify-center mb-3 border-4 border-white shadow-sm">
-                       <span className="text-xl">📈</span>
-                    </div>
-                    <div className="font-extrabold text-black text-sm">2<br/>Score Booster</div>
-                    <div className="text-[10px] text-gray-500 font-medium">(Score 60-70)</div>
-                 </div>
+                  <div className="flex flex-col items-center text-center">
+                     <div className="w-[51px] h-[51px] rounded-full bg-[#E0F2FE] flex items-center justify-center mb-3 border-4 border-white shadow-sm">
+                        <span className="text-xl">📈</span>
+                     </div>
+                     <div className="font-extrabold text-black text-sm">2<br/>Score Booster</div>
+                     <div className="text-[10px] text-black font-medium">(Score 60-70)</div>
+                  </div>
 
-                 <svg className="w-4 h-4 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" /></svg>
+                  <svg className="w-4 h-4 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" /></svg>
 
-                 <div className="flex flex-col items-center text-center">
-                    <div className="w-12 h-12 rounded-full bg-[#F3E8FF] flex items-center justify-center mb-3 border-4 border-white shadow-sm">
-                       <span className="text-xl">🎯</span>
-                    </div>
-                    <div className="font-extrabold text-black text-sm">3<br/>79+ Mastery</div>
-                    <div className="text-[10px] text-gray-500 font-medium">(Score 80+)</div>
-                 </div>
+                  <div className="flex flex-col items-center text-center">
+                     <div className="w-[51px] h-[51px] rounded-full bg-[#F3E8FF] flex items-center justify-center mb-3 border-4 border-white shadow-sm">
+                        <span className="text-xl">🎯</span>
+                     </div>
+                     <div className="font-extrabold text-black text-sm">3<br/>79+ Mastery</div>
+                     <div className="text-[10px] text-black font-medium">(Score 80+)</div>
+                  </div>
 
-                 <svg className="w-4 h-4 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" /></svg>
+                  <svg className="w-4 h-4 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" /></svg>
 
-                 <div className="flex flex-col items-center text-center">
-                    <div className="w-12 h-12 rounded-full bg-yellow-100 flex items-center justify-center mb-3 border-4 border-white shadow-sm">
-                       <span className="text-xl">🏆</span>
-                    </div>
-                    <div className="font-extrabold text-black text-sm">Real Exam</div>
-                    <div className="text-[10px] text-gray-500 font-medium">Achieve success.</div>
-                 </div>
+                  <div className="flex flex-col items-center text-center">
+                     <div className="w-[51px] h-[51px] rounded-full bg-yellow-100 flex items-center justify-center mb-3 border-4 border-white shadow-sm">
+                        <span className="text-xl">🏆</span>
+                     </div>
+                     <div className="font-extrabold text-black text-sm">Real Exam</div>
+                     <div className="text-[10px] text-black font-medium">Achieve success.</div>
+                  </div>
               </div>
            </div>
 
