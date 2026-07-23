@@ -76,7 +76,7 @@ export default function Navbar() {
 
             {/* Dropdown Menu */}
             {practiceOpen && (
-              <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-xl shadow-lg border border-gray-100 py-2 z-50">
+              <div className="absolute top-full left-0 pt-1 w-56 bg-white rounded-xl shadow-lg border border-gray-100 py-2 z-50">
                 {practiceDropdown.map((item) => (
                   <Link
                     key={item.href}
