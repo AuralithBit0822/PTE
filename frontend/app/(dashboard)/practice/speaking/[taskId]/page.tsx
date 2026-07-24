@@ -93,9 +93,11 @@ function TaskTopBar({ activeTaskId }: { activeTaskId: string }) {
 
 function TaskSidebar({
   activeTaskId,
+  questionCount,
   progress,
 }: {
   activeTaskId: string;
+  questionCount: number;
   progress: { current: number; total: number };
 }) {
   const percent = Math.round((progress.current / progress.total) * 100);
@@ -116,7 +118,7 @@ function TaskSidebar({
                   {task.id === "answer-short-question" ? "Answer Short Question" : task.label}
                 </span>
                 <span className="task-type-count">
-                  {isActive ? `${progress.current}/${progress.total}` : `0/${progress.total}`}
+                  {isActive ? `${questionCount}/${progress.total}` : `0/${progress.total}`}
                 </span>
               </Link>
             </li>
@@ -134,7 +136,22 @@ function TaskSidebar({
   );
 }
 
-function TaskInfoPanels({ instructions, tips }: { instructions: string[]; tips: string[] }) {
+function TaskInfoPanels({
+  instructions,
+  tips,
+  currentIndex,
+  totalQuestions,
+  recordedSet,
+  onNavigate,
+}: {
+  instructions: string[];
+  tips: string[];
+  currentIndex: number;
+  totalQuestions: number;
+  recordedSet: Set<number>;
+  onNavigate: (index: number) => void;
+}) {
+  const [showAll, setShowAll] = useState(false);
   return (
     <aside className="task-side-right">
       <div className="task-info-card">
@@ -158,6 +175,25 @@ function TaskInfoPanels({ instructions, tips }: { instructions: string[]; tips: 
             </li>
           ))}
         </ul>
+      </div>
+      <div className="task-info-card">
+        <h3 className="task-info-title"><InfoIcon /> Question Progress</h3>
+        <div className="task-progress-grid">
+          {(showAll ? Array.from({ length: totalQuestions }, (_, i) => i) : Array.from({ length: Math.min(10, totalQuestions) }, (_, i) => i)).map((i) => (
+            <button
+              key={i}
+              type="button"
+              className={`task-progress-box${i === currentIndex ? " active" : ""}${recordedSet.has(i) ? " recorded" : ""}`}
+              onClick={() => onNavigate(i)}
+              aria-label={`Go to question ${i + 1}`}
+            >
+              {i + 1}
+            </button>
+          ))}
+        </div>
+        <button type="button" className="task-progress-view-all" onClick={() => setShowAll((v) => !v)}>
+          {showAll ? "Show Less" : `View All ${totalQuestions} Questions`}
+        </button>
       </div>
     </aside>
   );
@@ -229,6 +265,7 @@ function ReadAloudTask() {
   const [elapsedSeconds, setElapsedSeconds] = useState(0);
   const [hasRecorded, setHasRecorded] = useState(false);
   const [recordedSet, setRecordedSet] = useState<Set<number>>(new Set());
+  const [visitedSet, setVisitedSet] = useState<Set<number>>(new Set(new Set([0])));
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
@@ -271,6 +308,7 @@ function ReadAloudTask() {
   function goToPrevious() {
     setCurrentIndex((i) => {
       const next = Math.max(0, i - 1);
+      setVisitedSet((prev) => new Set(prev).add(next));
       resetForQuestion();
       return next;
     });
@@ -279,9 +317,16 @@ function ReadAloudTask() {
   function goToNext() {
     setCurrentIndex((i) => {
       const next = Math.min(TOTAL_QUESTIONS - 1, i + 1);
+      setVisitedSet((prev) => new Set(prev).add(next));
       resetForQuestion();
       return next;
     });
+  }
+
+  function goToQuestion(index: number) {
+    setVisitedSet((prev) => new Set(prev).add(index));
+    setCurrentIndex(index);
+    resetForQuestion();
   }
 
   return (
@@ -291,6 +336,7 @@ function ReadAloudTask() {
       <div className="task-layout">
         <TaskSidebar
           activeTaskId="read-aloud"
+          questionCount={visitedSet.size}
           progress={{ current: recordedSet.size, total: TOTAL_QUESTIONS }}
         />
 
@@ -343,7 +389,14 @@ function ReadAloudTask() {
           />
         </section>
 
-        <TaskInfoPanels instructions={readAloudInstructions} tips={readAloudTips} />
+        <TaskInfoPanels
+          instructions={readAloudInstructions}
+          tips={readAloudTips}
+          currentIndex={currentIndex}
+          totalQuestions={TOTAL_QUESTIONS}
+          recordedSet={recordedSet}
+          onNavigate={goToQuestion}
+        />
       </div>
     </div>
   );
