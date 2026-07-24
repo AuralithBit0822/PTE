@@ -149,7 +149,7 @@ export default function Footer() {
         {/* Divider */}
         <div className="flex items-center gap-[107px] mb-5">
           {/* Card 1: Security Badge */}
-          <div className="flex items-center gap-3 h-[77px] rounded-[10px] bg-white border border-gray-200 px-[27px]" style={{ boxShadow: '1px 1px 10px 0px #00000033' }}>
+          <div className="flex items-center gap-3 h-[77px] rounded-[10px] bg-white border border-gray-200 pl-[10px] pr-[27px] w-[320px]" style={{ boxShadow: '1px 1px 10px 0px #00000033' }}>
               <div className="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0">
                 <svg className="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
@@ -163,7 +163,7 @@ export default function Footer() {
           </div>
 
           {/* Card 2: Stay Updated */}
-          <div className="flex items-center gap-3 h-[77px] rounded-[10px] bg-white border border-gray-200 px-[27px]" style={{ boxShadow: '1px 1px 10px 0px #00000033' }}>
+          <div className="flex items-center gap-3 h-[77px] rounded-[10px] bg-white border border-gray-200 pl-[10px] pr-[27px]  w-[320px]" style={{ boxShadow: '1px 1px 10px 0px #00000033' }}>
             <div className="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0">
               <svg className="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
