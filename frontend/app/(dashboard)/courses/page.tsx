@@ -422,7 +422,7 @@ export default function CoursesPage() {
       </section>
 
       {/* 6. Why Choose Our Courses */}
-      <section className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 py-20">
+      <section className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 py-[30px]">
         <h2 className="text-3xl font-extrabold text-gray-900 mb-10">Why Choose Our Courses?</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
            {[
@@ -432,13 +432,13 @@ export default function CoursesPage() {
              { title: 'Vocabulary Builder', desc: 'Build your vocabulary with smart learning tools designed for memory.', icon: 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253' },
              { title: 'Personalized Plan', desc: 'Get a customized study schedule mapped to your exam date and goals.', icon: 'M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' },
            ].map((feature, idx) => (
-              <div key={idx} className="bg-white rounded-2xl border border-gray-100 p-6 flex flex-col shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:-translate-y-1 transition-transform">
-                 <div className="w-12 h-12 rounded-xl bg-[#EEF2FF] flex items-center justify-center mb-5 mx-auto">
-                    <svg className="w-6 h-6 text-[#3B28CC]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={feature.icon} />
-                    </svg>
-                 </div>
-                 <h3 className="font-bold text-gray-900 text-center mb-3 text-sm">{feature.title}</h3>
+              <div key={idx} className="bg-white rounded-2xl border-2 border-[#D9D9D9] p-[19px] flex flex-col shadow-[0_4px_20px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition-transform">
+                  <div className="w-12 h-12 rounded-xl bg-[#D6DEFF] flex items-center justify-center mb-5 mx-auto">
+                     <svg className="w-6 h-6 text-[#3B28CC]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={feature.icon} />
+                     </svg>
+                  </div>
+                  <h3 className="font-bold text-gray-900 text-center mb-3 text-[16px]">{feature.title}</h3>
                  <p className="text-xs text-gray-500 text-center leading-relaxed flex-1">{feature.desc}</p>
               </div>
            ))}
@@ -447,7 +447,7 @@ export default function CoursesPage() {
 
       {/* 7. CTA Banner */}
       <section className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 pb-24">
-         <div className="bg-[#E0E7FF] rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between relative overflow-hidden">
+         <div className="bg-[#E0DAFE] rounded-3xl p-[7px] md:p-[23px] flex flex-col md:flex-row items-center justify-between relative overflow-hidden">
             {/* Background decorative elements */}
             <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#C7D2FE] rounded-full opacity-50 blur-3xl"></div>
             <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-[#C7D2FE] rounded-full opacity-50 blur-3xl"></div>
@@ -457,12 +457,12 @@ export default function CoursesPage() {
                   <span className="text-4xl">🎓</span>
                </div>
                <div>
-                  <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2">Ready to Achieve Your Target Score?</h2>
-                  <p className="text-gray-700 font-medium text-sm md:text-base">Join thousands of successful students and start your PTE journey today.</p>
+                  <h2 className="text-[22px] md:text-[28px] font-extrabold text-gray-900 mb-2">Ready to Achieve Your Target Score?</h2>
+                  <p className="text-gray-700 font-medium text-[13px] md:text-[15px]">Join thousands of successful students and start your PTE journey today.</p>
                </div>
             </div>
             
-            <button className="bg-[#3B28CC] hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl z-10 whitespace-nowrap shadow-[0_8px_30px_rgba(59,40,204,0.3)] transition-transform hover:-translate-y-1 flex items-center">
+            <button className="bg-[#3008F8] hover:bg-[#2506C6] text-white font-bold py-4 px-8 rounded-xl z-10 whitespace-nowrap shadow-[0_8px_30px_rgba(48,8,248,0.3)] transition-transform hover:-translate-y-1 flex items-center">
                Find My Perfect Course
                <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </button>
