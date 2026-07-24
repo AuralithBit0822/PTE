@@ -100,6 +100,23 @@
   animation-play-state: paused;
 }
 
+@keyframes scroll-infinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-infinite {
+  animation: scroll-infinite 10s linear infinite;
+}
+
+.animate-scroll-infinite:hover {
+  animation-play-state: paused;
+}
+
 /* ── Practice Page (Plain CSS) ── */
 .practice-page { min-height: 100vh; background: #fff; }
 
