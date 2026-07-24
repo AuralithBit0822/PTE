@@ -306,21 +306,17 @@ function ReadAloudTask() {
   }
 
   function goToPrevious() {
-    setCurrentIndex((i) => {
-      const next = Math.max(0, i - 1);
-      setVisitedSet((prev) => new Set(prev).add(next));
-      resetForQuestion();
-      return next;
-    });
+    const next = Math.max(0, currentIndex - 1);
+    setCurrentIndex(next);
+    setVisitedSet((prev) => new Set(prev).add(next));
+    resetForQuestion();
   }
 
   function goToNext() {
-    setCurrentIndex((i) => {
-      const next = Math.min(TOTAL_QUESTIONS - 1, i + 1);
-      setVisitedSet((prev) => new Set(prev).add(next));
-      resetForQuestion();
-      return next;
-    });
+    const next = Math.min(TOTAL_QUESTIONS - 1, currentIndex + 1);
+    setCurrentIndex(next);
+    setVisitedSet((prev) => new Set(prev).add(next));
+    resetForQuestion();
   }
 
   function goToQuestion(index: number) {
@@ -336,7 +332,7 @@ function ReadAloudTask() {
       <div className="task-layout">
         <TaskSidebar
           activeTaskId="read-aloud"
-          questionCount={visitedSet.size}
+          questionCount={currentIndex + 1}
           progress={{ current: recordedSet.size, total: TOTAL_QUESTIONS }}
         />
 
