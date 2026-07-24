@@ -601,10 +601,10 @@
 .writing-breadcrumbs a { color: inherit; }
 .writing-breadcrumbs .current-crumb { color: var(--brand-blue); font-weight: 800; }
 
-.writing-hero-visual { display: flex; }
-.writing-feedback-card { min-width: 210px; padding: 18px 24px; top: 37%; left: -2%; }
-.writing-feedback-card h4 { padding-bottom: 6px; margin-bottom: 6px; border-bottom: 1px solid #eee; font-size: 0.9rem; }
-.writing-feedback-card .ai-feedback-row { font-size: 0.82rem; padding: 3px 0; gap: 10px; }
+.practice-hero-visual { display: flex; }
+.practice-feedback-card { min-width: 210px; padding: 18px 24px; top: 37%; left: -2%; }
+.practice-feedback-card h4 { padding-bottom: 6px; margin-bottom: 6px; border-bottom: 1px solid #eee; font-size: 0.9rem; }
+.practice-feedback-card .ai-feedback-row { font-size: 0.82rem; padding: 3px 0; gap: 10px; }
 
 /* ── Writing task cards (Summarize Written Text / Essay) ── */
 .writing-tasks-section { padding-top: 5rem; padding-bottom: 0; }
@@ -633,43 +633,43 @@
 .writing-task-footer .practice-button { padding: 0.55rem 1.2rem; font-size: 0.9rem; }
 
 /* ── Improve Your Writing Skills banner ── */
-.writing-skills-banner {
+.practice-skills-banner {
   background: #f6f4fe; border: 2px solid #d9d6d6; border-radius: 14px; padding: 2.5rem 2rem 3rem; margin-bottom: 3rem;
 }
-.writing-skills-banner .section-title-center { margin-bottom: 2rem; }
-.writing-skills-grid { display: grid; grid-template-columns: repeat(5, 1fr); }
-.writing-skill-item {
+.practice-skills-banner .section-title-center { margin-bottom: 2rem; }
+.practice-skills-grid { display: grid; grid-template-columns: repeat(5, 1fr); }
+.practice-skill-item {
   display: flex; flex-direction: column; align-items: center; text-align: center;
   padding: 0 1.25rem; border-left: 1px solid #c4bfe0;
 }
-.writing-skill-item:first-child { border-left: none; }
-.writing-skill-icon {
+.practice-skill-item:first-child { border-left: none; }
+.practice-skill-icon {
   margin-bottom: 0.9rem;
 }
-.writing-skill-icon img { width: 55px; height: 55px; border-radius: 50%; object-fit: cover; }
-.writing-skill-item h3 { margin: 0 0 0.5rem; font-size: 0.9rem; font-weight: 800; }
-.writing-skill-item p { margin: 0; font-size: 0.9rem; color: #55556b; line-height: 1.45; }
+.practice-skill-icon img { width: 55px; height: 55px; border-radius: 50%; object-fit: cover; }
+.practice-skill-item h3 { margin: 0 0 0.5rem; font-size: 0.9rem; font-weight: 800; }
+.practice-skill-item p { margin: 0; font-size: 0.9rem; color: #55556b; line-height: 1.45; }
 
 /* ── Get AI Feedback CTA banner ── */
-.writing-cta-banner {
+.practice-cta-banner {
   background: #f6f4fe; border: 2px solid #d9d6d6; border-radius: 14px; padding: 3rem 3.5rem;
   display: flex; align-items: center; gap: 2.5rem; margin: 0 0 3rem;
 }
-.writing-cta-robot-wrap { position: relative; flex-shrink: 0; }
-.writing-cta-copy { flex: 1; min-width: 200px; }
-.writing-cta-copy h3 { margin: 0 0 0.5rem; font-size: 1.4rem; font-weight: 800; }
-.writing-cta-copy p { margin: 0; color: #46465a; font-size: 1rem; }
-.writing-cta-button { flex-shrink: 0; padding: 0.65rem 1.4rem; font-size: 1rem; }
-.writing-cta-illustration { flex-shrink: 0; }
+.practice-cta-robot-wrap { position: relative; flex-shrink: 0; }
+.practice-cta-copy { flex: 1; min-width: 200px; }
+.practice-cta-copy h3 { margin: 0 0 0.5rem; font-size: 1.4rem; font-weight: 800; }
+.practice-cta-copy p { margin: 0; color: #46465a; font-size: 1rem; }
+.practice-cta-button { flex-shrink: 0; padding: 0.65rem 1.4rem; font-size: 1rem; }
+.practice-cta-illustration { flex-shrink: 0; }
 
 @media (max-width: 1100px) {
   .writing-tasks-grid { grid-template-columns: 1fr; }
-  .writing-skills-grid { grid-template-columns: repeat(2, 1fr); row-gap: 2rem; }
-  .writing-skill-item { border-left: none; }
-  .writing-cta-banner { flex-wrap: wrap; }
+  .practice-skills-grid { grid-template-columns: repeat(2, 1fr); row-gap: 2rem; }
+  .practice-skill-item { border-left: none; }
+  .practice-cta-banner { flex-wrap: wrap; }
 }
 @media (max-width: 640px) {
-  .writing-skills-grid { grid-template-columns: 1fr; }
+  .practice-skills-grid { grid-template-columns: 1fr; }
   .writing-task-illustration { display: none; }
   .writing-task-card > .writing-task-copy > p { max-width: 100%; }
 }

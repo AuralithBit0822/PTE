@@ -108,7 +108,7 @@ const listeningSkillPoints = [
 export default function ListeningPracticePage() {
   return (
     <main className="practice-page">
-      <section className="speaking-hero writing-hero">
+      <section className="speaking-hero practice-hero">
         <div className="speaking-hero-grid">
           <div className="speaking-hero-copy">
             <div className="breadcrumbs">
@@ -135,7 +135,7 @@ export default function ListeningPracticePage() {
             </div>
           </div>
 
-          <div className="speaking-hero-visual writing-hero-visual">
+          <div className="speaking-hero-visual practice-hero-visual">
             <Image
               src="/images/girlpiclistening.png"
               alt="Student wearing headphones during PTE listening practice"
@@ -144,7 +144,7 @@ export default function ListeningPracticePage() {
               className="speaking-hero-image"
               priority
             />
-            <div className="ai-feedback-card writing-feedback-card">
+            <div className="ai-feedback-card practice-feedback-card">
               <h4>AI Feedback</h4>
               {aiFeedbackRows.map(({ label, tag }) => (
                 <div className="ai-feedback-row" key={label}>
@@ -173,12 +173,12 @@ export default function ListeningPracticePage() {
           ))}
         </div>
 
-        <div className="writing-skills-banner">
+        <div className="practice-skills-banner">
           <h2 className="section-title-center">Improve Your Listening Skills</h2>
-          <div className="writing-skills-grid">
+          <div className="practice-skills-grid">
             {listeningSkillPoints.map(({ title, description, image }) => (
-              <div className="writing-skill-item" key={title}>
-                <span className="writing-skill-icon">
+              <div className="practice-skill-item" key={title}>
+                <span className="practice-skill-icon">
                   <Image src={image} alt={title} width={40} height={40} />
                 </span>
                 <h3>{title}</h3>
@@ -190,18 +190,18 @@ export default function ListeningPracticePage() {
       </section>
 
       <section className="content-section">
-        <div className="writing-cta-banner">
-          <div className="writing-cta-robot-wrap">
+        <div className="practice-cta-banner">
+          <div className="practice-cta-robot-wrap">
             <Image src="/images/writingrobot.png" alt="AI robot mascot" width={140} height={140} />
           </div>
-          <div className="writing-cta-copy">
+          <div className="practice-cta-copy">
             <h3>Get AI Feedback On Your Listening</h3>
             <p>Submit your answer get instant AI feedback to improve your listening score</p>
           </div>
-          <Link href="/practice/listening" className="practice-button writing-cta-button">
+          <Link href="/practice/listening" className="practice-button practice-cta-button">
             Start Free Practicing Test <span aria-hidden="true">→</span>
           </Link>
-          <div className="writing-cta-illustration">
+          <div className="practice-cta-illustration">
             <Image src="/images/writingfeedback.png" alt="Checklist illustration" width={140} height={140} />
           </div>
         </div>
