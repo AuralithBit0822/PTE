@@ -737,15 +737,15 @@
   align-items: center; text-align: center; gap: 0.5rem;
   box-shadow: 0 20px 40px rgba(33,25,138,0.06);
 }
-.listening-task-icon { color: var(--brand-blue); margin-bottom: 0.25rem; }
-.listening-task-icon svg { width: 32px; height: 32px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.listening-task-icon { color: #2024f1; background: rgba(48, 8, 248, 0.1); width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 0.25rem; }
+.listening-task-icon svg { width: 28px; height: 28px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .listening-task-card h3 { margin: 0; font-size: 0.95rem; font-weight: 800; }
 .listening-task-card p { margin: 0; font-size: 0.82rem; color: #55556b; line-height: 1.45; }
 .listening-task-time {
   display: inline-flex; align-items: center; gap: 5px;
-  font-size: 0.78rem; color: #888; font-weight: 600; margin-top: auto;
+  font-size: 0.78rem; color: #18181b; font-weight: 600; margin-top: auto;
 }
-.listening-task-time svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.listening-task-time svg { width: 14px; height: 14px; fill: none; stroke: rgba(48, 8, 248, 1); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .listening-task-card .practice-button { padding: 0.4rem 0.85rem; font-size: 0.8rem; border-radius: 8px; margin-top: 0.5rem; }
 
 @media (max-width: 1100px) {
