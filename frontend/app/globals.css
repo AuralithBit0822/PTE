@@ -721,3 +721,39 @@
 @media (max-width: 1100px) {
   .reading-book-stack { display: none; }
 }
+
+/* ══════════════════════════════════════════════
+   Listening Practice page (/practice/listening)
+   ══════════════════════════════════════════════ */
+
+.listening-tasks-section { padding-top: 4rem; }
+.listening-tasks-grid {
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.25rem;
+  max-width: 1100px; margin: 0 auto; margin-bottom: 8rem;
+}
+.listening-task-card {
+  background: #fff; border: 2px solid #d9d6d6; border-radius: 14px;
+  padding: 1.5rem 1.25rem; display: flex; flex-direction: column;
+  align-items: center; text-align: center; gap: 0.5rem;
+  box-shadow: 0 20px 40px rgba(33,25,138,0.06);
+}
+.listening-task-icon { color: var(--brand-blue); margin-bottom: 0.25rem; }
+.listening-task-icon svg { width: 32px; height: 32px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.listening-task-card h3 { margin: 0; font-size: 0.95rem; font-weight: 800; }
+.listening-task-card p { margin: 0; font-size: 0.82rem; color: #55556b; line-height: 1.45; }
+.listening-task-time {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 0.78rem; color: #888; font-weight: 600; margin-top: auto;
+}
+.listening-task-time svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.listening-task-card .practice-button { padding: 0.4rem 0.85rem; font-size: 0.8rem; border-radius: 8px; margin-top: 0.5rem; }
+
+@media (max-width: 1100px) {
+  .listening-tasks-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+  .listening-tasks-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 500px) {
+  .listening-tasks-grid { grid-template-columns: 1fr; }
+}
