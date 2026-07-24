@@ -98,11 +98,11 @@ const listeningTasks = [
 ];
 
 const listeningSkillPoints = [
-  { title: "Real Exam Audio", description: "Practice with real PTE exam-style audio.", image: "/images/aievaluation.png" },
-  { title: "Smart Note-Taking", description: "Learn effective note-taking techniques.", image: "/images/modelanswers.png" },
+  { title: "Real Exam Audio", description: "Practice with real PTE exam-style audio.", image: "/images/realexamaudio.png" },
+  { title: "Smart Note-Taking", description: "Learn effective note-taking techniques.", image: "/images/smartnotetaking.png" },
   { title: "Better Accuracy", description: "Improve accuracy with regular practice.", image: "/images/scoreimprovement.png" },
-  { title: "Performance Tracking", description: "Track your performance and progress.", image: "/images/grammar&vocabulary.png" },
-  { title: "Practice Anywhere", description: "Access listening practice anytime, anywhere.", image: "/images/practiceanytime.png" },
+  { title: "Performance Tracking", description: "Track your performance and progress.", image: "/images/performancetracking.png" },
+  { title: "Practice Anywhere", description: "Access listening practice anytime, anywhere.", image: "/images/practiceanywhere.png" },
 ];
 
 export default function ListeningPracticePage() {
